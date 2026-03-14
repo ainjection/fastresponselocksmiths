@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Fast Response | 24/7 Emergency Auto Locksmith Wakefield & West Yorkshire</title>
+    <meta name="description" content="Car Fast Response - Wakefield's trusted auto locksmith. 24/7 emergency car lockout, lost key replacement & damage-free vehicle entry. Call 01924 201261 now.">
+    <meta name="keywords" content="car locksmith Wakefield, auto locksmith West Yorkshire, emergency car lockout, lost car keys, vehicle entry Wakefield, Car Fast Response">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --red: #c41a1a;
+            --red-dark: #9b1111;
+            --red-deep: #7a0c0c;
+            --red-light: #ff4444;
+            --red-glow: rgba(196, 26, 26, 0.3);
+            --red-soft: #fef2f2;
+            --dark: #111111;
+            --dark-mid: #1a1a1a;
+            --dark-light: #222222;
+            --dark-card: #1e1e1e;
+            --white: #ffffff;
+            --off-white: #f9f9f9;
+            --grey: #f3f3f3;
+            --text: #333333;
+            --text-light: #666666;
+            --text-lighter: #999999;
+            --border: #e5e5e5;
+            --gold: #f5a623;
+            --green: #22c55e;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --shadow: 0 4px 24px rgba(0,0,0,0.08);
+            --shadow-lg: 0 20px 60px rgba(0,0,0,0.12);
+            --shadow-red: 0 8px 30px rgba(196, 26, 26, 0.25);
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background: var(--dark);
+            color: rgba(255,255,255,0.7);
+            padding: 8px 0;
+            font-size: 0.8rem;
+        }
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .top-bar-badges {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+        .top-bar-badge {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .top-bar-badge svg { width: 13px; height: 13px; fill: var(--green); }
+        .top-bar-right a {
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: box-shadow var(--transition);
+        }
+        header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        /* CSS Logo mimicking the red rectangle style */
+        .logo-block {
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+
+        .logo-badge {
+            background: var(--red);
+            border: 3px solid var(--white);
+            outline: 3px solid var(--red);
+            padding: 8px 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-padlock {
+            width: 36px;
+            height: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .logo-words {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            letter-spacing: 0.02em;
+        }
+
+        .logo-words .car-text {
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            display: block;
+            opacity: 0.9;
+        }
+
+        nav { display: flex; align-items: center; gap: 4px; }
+
+        nav a.nav-link {
+            font-weight: 600;
+            color: var(--text-light);
+            padding: 8px 14px;
+            border-radius: var(--radius-sm);
+            transition: all var(--transition);
+            font-size: 0.88rem;
+        }
+        nav a.nav-link:hover { color: var(--red); background: var(--red-soft); }
+
+        .nav-phone {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--red);
+            color: var(--white) !important;
+            padding: 12px 22px !important;
+            border-radius: var(--radius-sm) !important;
+            font-weight: 700 !important;
+            font-size: 0.95rem !important;
+            margin-left: 10px;
+            box-shadow: var(--shadow-red);
+            transition: all var(--transition);
+        }
+        .nav-phone:hover { background: var(--red-dark); transform: translateY(-1px); }
+        .nav-phone svg { width: 16px; height: 16px; fill: var(--white); }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+        .menu-toggle span {
+            display: block; width: 24px; height: 2.5px;
+            background: var(--dark); border-radius: 2px;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            background: var(--dark);
+            color: var(--white);
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                url('https://www.locksmithsinwakefield.co.uk/uploads/7/6/5/3/76533111/13775417-1165661126837079-4911717036008359899-n_1_orig.jpg') center/cover no-repeat;
+            opacity: 0.25;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(17,17,17,0.95) 0%, rgba(17,17,17,0.7) 50%, rgba(196,26,26,0.3) 100%);
+        }
+
+        .hero-red-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--red);
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .hero-emergency {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--red);
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-red);
+        }
+
+        .pulse-dot {
+            width: 8px; height: 8px;
+            background: var(--white);
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(255,255,255,0.4); }
+            50% { opacity: 0.6; box-shadow: 0 0 0 8px rgba(255,255,255,0); }
+        }
+
+        .hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.6rem;
+            font-weight: 700;
+            line-height: 1.05;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+        }
+        .hero h1 .red { color: var(--red-light); }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+            margin-bottom: 28px;
+            max-width: 500px;
+        }
+
+        .hero-phones {
+            margin-bottom: 32px;
+        }
+
+        .hero-phone-main {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: var(--white);
+            transition: color var(--transition);
+        }
+        .hero-phone-main:hover { color: var(--red-light); }
+        .hero-phone-main svg { width: 30px; height: 30px; fill: var(--red-light); }
+
+        .hero-phone-mobile {
+            margin-top: 4px;
+            font-size: 1rem;
+            color: rgba(255,255,255,0.5);
+            padding-left: 42px;
+        }
+        .hero-phone-mobile a { color: var(--gold); font-weight: 600; }
+        .hero-phone-mobile a:hover { color: var(--white); }
+
+        .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            gap: 10px; padding: 16px 32px; border-radius: var(--radius-sm);
+            font-size: 1rem; font-weight: 700; cursor: pointer;
+            transition: all var(--transition); border: none; line-height: 1;
+        }
+        .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+        .btn-lg { padding: 18px 36px; font-size: 1.05rem; }
+
+        .btn-red {
+            background: var(--red);
+            color: var(--white);
+            box-shadow: var(--shadow-red);
+        }
+        .btn-red:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 12px 35px var(--red-glow); }
+
+        .btn-white-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        .btn-white-outline:hover { background: var(--white); color: var(--dark); border-color: var(--white); }
+
+        .btn-dark {
+            background: var(--dark);
+            color: var(--white);
+        }
+        .btn-dark:hover { background: var(--dark-light); transform: translateY(-2px); }
+
+        /* Hero right - info card */
+        .hero-info-card {
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .hero-info-header {
+            background: var(--red);
+            padding: 16px 24px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .hero-info-header svg { width: 18px; height: 18px; fill: var(--white); }
+
+        .hero-info-body { padding: 24px; }
+
+        .hero-stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .hero-stat {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius-sm);
+            padding: 18px 14px;
+            text-align: center;
+        }
+
+        .hero-stat-val {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--red-light);
+            line-height: 1;
+        }
+
+        .hero-stat-lbl {
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-trust-list { display: flex; flex-direction: column; gap: 8px; }
+
+        .hero-trust-item {
+            display: flex; align-items: center; gap: 8px;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .hero-trust-item svg { width: 16px; height: 16px; fill: var(--green); flex-shrink: 0; }
+
+        /* ===== FEATURES BAR ===== */
+        .features-bar {
+            background: var(--red);
+            color: var(--white);
+            padding: 20px 0;
+        }
+        .features-bar .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .feature-icon {
+            width: 40px; height: 40px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .feature-icon svg { width: 20px; height: 20px; fill: var(--white); }
+        .feature-item small { display: block; font-weight: 400; font-size: 0.78rem; opacity: 0.8; }
+
+        /* ===== SECTIONS ===== */
+        .section { padding: 90px 0; }
+
+        .section-label {
+            display: inline-block;
+            background: var(--red-soft);
+            color: var(--red);
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            padding: 5px 14px;
+            border-radius: 4px;
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--dark);
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 14px;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            max-width: 550px;
+            line-height: 1.7;
+        }
+
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header .section-subtitle { margin: 0 auto; }
+
+        /* ===== SERVICES ===== */
+        .services { background: var(--grey); }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all var(--transition);
+            position: relative;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--red);
+        }
+
+        .service-card-top {
+            height: 4px;
+            background: var(--red);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        .service-card:hover .service-card-top { transform: scaleX(1); }
+
+        .service-card-body { padding: 32px 28px; }
+
+        .service-card-icon {
+            width: 52px; height: 52px;
+            background: var(--red);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 20px;
+        }
+        .service-card-icon svg { width: 26px; height: 26px; fill: var(--white); }
+
+        .service-card h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.65;
+        }
+
+        /* ===== ABOUT / WHY US (image split) ===== */
+        .about { background: var(--white); }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-image {
+            position: relative;
+            min-height: 500px;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            inset: 0;
+        }
+
+        .about-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, transparent 60%, rgba(17,17,17,0.3));
+        }
+
+        .about-image-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: var(--red);
+            color: var(--white);
+            padding: 10px 18px;
+            border-radius: var(--radius-sm);
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            box-shadow: var(--shadow-red);
+        }
+
+        .about-content {
+            background: var(--dark);
+            color: var(--white);
+            padding: 50px 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-content .section-label {
+            background: rgba(196, 26, 26, 0.2);
+            color: var(--red-light);
+        }
+
+        .about-content .section-title {
+            color: var(--white);
+        }
+
+        .about-content p {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .about-checks {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 28px;
+        }
+
+        .about-checks li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.75);
+        }
+        .about-checks li svg { width: 16px; height: 16px; fill: var(--green); flex-shrink: 0; }
+
+        .about-phone {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .about-phone-icon {
+            width: 50px; height: 50px;
+            background: var(--red);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .about-phone-icon svg { width: 22px; height: 22px; fill: var(--white); }
+
+        .about-phone-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+        .about-phone-number:hover { color: var(--red-light); }
+
+        .about-phone-sub {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* ===== BADGES BAR ===== */
+        .badges-bar {
+            background: var(--grey);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .badges-bar .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .badge-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .badge-item img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(20%);
+            transition: filter var(--transition);
+        }
+        .badge-item:hover img { filter: grayscale(0%); }
+
+        .badge-item span {
+            font-size: 0.72rem;
+            color: var(--text-lighter);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .how-it-works { background: var(--white); }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            position: relative;
+        }
+
+        .step {
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .step-num {
+            width: 70px; height: 70px;
+            background: var(--red);
+            color: var(--white);
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: var(--shadow-red);
+            position: relative;
+            z-index: 1;
+        }
+
+        .step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 75px;
+            right: -15px;
+            width: 30px;
+            height: 2px;
+            background: var(--red);
+            opacity: 0.3;
+        }
+
+        .step h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.15rem;
+            text-transform: uppercase;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ===== COVERAGE ===== */
+        .coverage {
+            background: var(--dark);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .coverage::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(196,26,26,0.06) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .coverage .section-label { background: rgba(196,26,26,0.2); color: var(--red-light); }
+        .coverage .section-title { color: var(--white); }
+        .coverage .section-subtitle { color: rgba(255,255,255,0.5); }
+
+        .coverage-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            max-width: 820px;
+            margin: 0 auto 24px;
+            position: relative;
+        }
+
+        .cov-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 14px 16px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.88rem;
+            transition: all var(--transition);
+        }
+        .cov-item:hover {
+            background: rgba(196,26,26,0.15);
+            border-color: rgba(196,26,26,0.3);
+            transform: translateY(-2px);
+        }
+        .cov-item svg { width: 16px; height: 16px; fill: var(--red-light); flex-shrink: 0; }
+
+        .coverage-note {
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.88rem;
+            position: relative;
+        }
+
+        /* ===== TOOLS STRIP ===== */
+        .tools-strip {
+            background: var(--grey);
+            padding: 60px 0;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .tools-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .tools-image img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .tools-content h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .tools-content p {
+            color: var(--text-light);
+            font-size: 0.92rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .tools-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tools-list li {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--white);
+            padding: 8px 14px;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        .tools-list li svg { width: 14px; height: 14px; fill: var(--red); }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials { background: var(--white); }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .test-card {
+            background: var(--grey);
+            border-radius: var(--radius);
+            padding: 32px;
+            border: 1px solid var(--border);
+            transition: all var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+        .test-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--red); }
+
+        .test-stars {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 14px;
+        }
+        .test-stars svg { width: 18px; height: 18px; fill: var(--gold); }
+
+        .test-card blockquote {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            font-style: italic;
+            flex: 1;
+            margin-bottom: 20px;
+        }
+
+        .test-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+        }
+
+        .test-avatar {
+            width: 40px; height: 40px;
+            background: var(--red);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .test-name { font-weight: 700; font-size: 0.88rem; color: var(--dark); }
+        .test-loc { font-size: 0.78rem; color: var(--text-lighter); }
+
+        /* ===== CTA ===== */
+        .cta {
+            background: var(--red);
+            padding: 80px 0;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        .cta .container { position: relative; z-index: 1; }
+
+        .cta h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.6rem;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            margin-bottom: 8px;
+        }
+
+        .cta-phone {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--white);
+            display: block;
+            margin-bottom: 6px;
+            transition: opacity var(--transition);
+        }
+        .cta-phone:hover { opacity: 0.8; }
+
+        .cta-mobile {
+            font-size: 1rem;
+            opacity: 0.6;
+            margin-bottom: 28px;
+            display: block;
+        }
+        .cta-mobile a { color: var(--white); font-weight: 700; text-decoration: underline; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 60px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            padding-bottom: 40px;
+        }
+
+        .footer-logo-block {
+            display: inline-flex;
+            background: var(--red);
+            border: 2px solid rgba(255,255,255,0.2);
+            padding: 6px 14px;
+            margin-bottom: 16px;
+        }
+
+        .footer-logo-text {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+        }
+
+        .footer-desc {
+            color: rgba(255,255,255,0.45);
+            font-size: 0.85rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .footer-certs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .footer-cert {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.5);
+        }
+        .footer-cert svg { width: 12px; height: 12px; fill: var(--green); }
+
+        footer h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--red-light);
+            margin-bottom: 18px;
+        }
+
+        footer ul { list-style: none; }
+        footer ul li { margin-bottom: 8px; }
+        footer ul a {
+            color: rgba(255,255,255,0.45);
+            font-size: 0.85rem;
+            transition: color var(--transition);
+        }
+        footer ul a:hover { color: var(--red-light); }
+
+        .footer-contact-row {
+            display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px;
+        }
+        .footer-contact-icon {
+            width: 32px; height: 32px;
+            background: rgba(196,26,26,0.15);
+            border-radius: 6px;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .footer-contact-icon svg { width: 14px; height: 14px; fill: var(--red-light); }
+        .footer-contact-text { font-size: 0.85rem; color: rgba(255,255,255,0.45); }
+        .footer-contact-text a { color: var(--red-light); font-weight: 700; }
+        .footer-contact-text a:hover { color: var(--white); }
+        .footer-contact-text strong { color: rgba(255,255,255,0.7); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 18px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.25);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero .container { grid-template-columns: 1fr; text-align: center; }
+            .hero-desc { margin: 0 auto 28px; }
+            .hero-buttons { justify-content: center; }
+            .hero-phone-main { justify-content: center; }
+            .hero-phone-mobile { padding-left: 0; }
+            .hero-info-card { max-width: 440px; margin: 0 auto; }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-image { min-height: 300px; }
+            .tools-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .section { padding: 60px 0; }
+            nav .nav-link { display: none; }
+            .menu-toggle { display: flex; }
+            .logo-badge { padding: 6px 12px; }
+            .logo-words { font-size: 1.1rem; }
+            .logo-padlock { width: 28px; }
+
+            .hero { min-height: auto; }
+            .hero h1 { font-size: 2.4rem; }
+            .hero-phone-main { font-size: 2rem; }
+            .section-title { font-size: 1.9rem; }
+
+            .services-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
+            .steps-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
+            .step:not(:last-child)::after { display: none; }
+            .testimonials-grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; }
+            .coverage-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-checks { grid-template-columns: 1fr; }
+            .about-content { padding: 36px 28px; }
+
+            .features-bar .container { flex-direction: column; align-items: center; gap: 12px; }
+            .cta h2 { font-size: 1.9rem; }
+            .cta-phone { font-size: 2.2rem; }
+
+            .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+            .top-bar-badges { display: none; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.85rem; }
+            .hero-phone-main { font-size: 1.6rem; }
+            .hero-stat-grid { gap: 8px; }
+            .hero-stat { padding: 14px 10px; }
+            .hero-stat-val { font-size: 1.5rem; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .coverage-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 1.6rem; }
+            .cta-phone { font-size: 1.7rem; }
+            .badges-bar .container { gap: 20px; }
+            .badge-item img { height: 45px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="container">
+        <div class="top-bar-badges">
+            <div class="top-bar-badge">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                NNAL Approved
+            </div>
+            <div class="top-bar-badge">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                NVQ Level 2 Qualified
+            </div>
+            <div class="top-bar-badge">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                CRB Checked
+            </div>
+        </div>
+        <div class="top-bar-right">
+            24/7 Emergency: <a href="tel:01924201261">01924 201 261</a>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header id="header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="#" class="logo-block">
+                <div class="logo-badge">
+                    <img src="https://www.locksmithsinwakefield.co.uk/uploads/7/6/5/3/76533111/padlock-png9428_orig.png" alt="Padlock" class="logo-padlock">
+                    <div class="logo-words">
+                        <span class="car-text">Car</span>
+                        Fast Response
+                    </div>
+                </div>
+            </a>
+
+            <nav>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#coverage" class="nav-link">Areas</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="tel:01924201261" class="nav-link nav-phone">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
+                    01924 201 261
+                </a>
+                <button class="menu-toggle" onclick="this.closest('nav').classList.toggle('open')" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-red-bar"></div>
+
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-emergency">
+                <div class="pulse-dot"></div>
+                24/7 Emergency Auto Locksmith
+            </div>
+
+            <h1>Locked Out of<br>Your <span class="red">Car?</span></h1>
+
+            <p class="hero-desc">Car Fast Response is run by locksmiths, not a call centre. When you ring, you speak directly to a qualified auto locksmith who'll get you back on the road &mdash; fast and damage free.</p>
+
+            <div class="hero-phones">
+                <a href="tel:01924201261" class="hero-phone-main">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
+                    01924 201 261
+                </a>
+                <div class="hero-phone-mobile">Mobile: <a href="tel:07812593251">07812 593 251</a></div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="tel:01924201261" class="btn btn-red btn-lg">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
+                    Call Now &mdash; We're Ready
+                </a>
+                <a href="#services" class="btn btn-white-outline btn-lg">Our Services</a>
+            </div>
+        </div>
+
+        <div class="hero-info-card">
+            <div class="hero-info-header">
+                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+                Why Drivers Trust Us
+            </div>
+            <div class="hero-info-body">
+                <div class="hero-stat-grid">
+                    <div class="hero-stat">
+                        <div class="hero-stat-val">30</div>
+                        <div class="hero-stat-lbl">Min Response</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-val">7+</div>
+                        <div class="hero-stat-lbl">Years Experience</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-val">24/7</div>
+                        <div class="hero-stat-lbl">Always On Call</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-val">0%</div>
+                        <div class="hero-stat-lbl">Vehicle Damage</div>
+                    </div>
+                </div>
+                <div class="hero-trust-list">
+                    <div class="hero-trust-item">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                        NNAL Approved Locksmith
+                    </div>
+                    <div class="hero-trust-item">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                        NVQ Level 2 Qualified
+                    </div>
+                    <div class="hero-trust-item">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                        CRB Checked &amp; Vetted
+                    </div>
+                    <div class="hero-trust-item">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                        Checkatrade Verified
+                    </div>
+                    <div class="hero-trust-item">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                        Best Locksmith in Wakefield 2024
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES BAR -->
+<div class="features-bar">
+    <div class="container">
+        <div class="feature-item">
+            <div class="feature-icon">
+                <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+            </div>
+            <div>No Call-Out Charge<br><small>Competitive upfront pricing</small></div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            </div>
+            <div>Damage-Free Entry<br><small>Specialist LISHI tools</small></div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">
+                <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+            </div>
+            <div>All Makes &amp; Models<br><small>Cars, vans &amp; commercial</small></div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+            </div>
+            <div>Cards Accepted<br><small>All major credit &amp; debit</small></div>
+        </div>
+    </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services section" id="services">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">Our Services</div>
+            <h2 class="section-title">Auto Locksmith Services</h2>
+            <p class="section-subtitle">Fully mobile vehicle locksmith covering Wakefield and the whole WF postcode area. We come to you with the latest tools and equipment.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-card-top"></div>
+                <div class="service-card-body">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9z"/></svg>
+                    </div>
+                    <h3>Car Lockout Assistance</h3>
+                    <p>Locked your keys in the car? Our local rapid response team will gain entry to your car absolutely damage free using specialist LISHI tools and lock pick sets.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-top"></div>
+                <div class="service-card-body">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12.65 10a6 6 0 1 0-1.3 0H7v2h1v2h2v-2h1.35zM8 6a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm14 6h-2v-2h-2v2h-2v2h2v2h2v-2h2v-2z"/></svg>
+                    </div>
+                    <h3>Lost Car Key Replacement</h3>
+                    <p>Lost all your car keys? We cut and programme brand new keys at your location. No expensive dealer visit, no towing &mdash; just a fast, affordable solution on the spot.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-top"></div>
+                <div class="service-card-body">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M17 1H7c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 18H7V5h10v14zm-5-1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
+                    </div>
+                    <h3>Chip Keys &amp; Remote Fobs</h3>
+                    <p>We programme transponder chip keys and remote key fobs for a wide range of vehicles. Our fully equipped mobile unit means we come to you &mdash; no towing required.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-top"></div>
+                <div class="service-card-body">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+                    </div>
+                    <h3>Ignition Repair &amp; Replacement</h3>
+                    <p>Key stuck or won't turn? Broken key snapped in the ignition? We diagnose and repair ignition barrel problems on-site, quickly and affordably.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-top"></div>
+                <div class="service-card-body">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M22 11V3h-7l2.79 2.79-3.79 3.8 1.41 1.41 3.8-3.79L22 10V3zm-3.54 8.46l-3.8-3.79-1.41 1.41 3.79 3.8L14 24h7v-7l-2.54 2.46z"/></svg>
+                    </div>
+                    <h3>Key Cutting</h3>
+                    <p>Need a spare cut? We provide precision key cutting for all vehicle types at your location. Get a spare made now before you're caught out in an emergency.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-top"></div>
+                <div class="service-card-body">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M18 18.5a1.5 1.5 0 1 0 .001 3.001A1.5 1.5 0 0 0 18 18.5zM19.5 9.5L21 11h-6V6h2l2.5 3.5zM6 18.5a1.5 1.5 0 1 0 .001 3.001A1.5 1.5 0 0 0 6 18.5zM20 8l3 4v5h-2a3 3 0 0 1-6 0H9a3 3 0 0 1-6 0H1V6c0-1.1.9-2 2-2h14v4h3z"/></svg>
+                    </div>
+                    <h3>Vans &amp; Commercial Vehicles</h3>
+                    <p>We cover vans, trucks, and commercial vehicles of all sizes. Fleet lockout or a replacement key for your work van &mdash; we've got it covered.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT / WHY US -->
+<section class="about section" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="https://www.locksmithsinwakefield.co.uk/uploads/7/6/5/3/76533111/lishi-hu66-and-32in1-lock-pick-set-7768_orig.jpg" alt="Professional LISHI lock pick tools used for non-destructive vehicle entry">
+                <div class="about-image-overlay"></div>
+                <div class="about-image-badge">Award Winner 2024</div>
+            </div>
+            <div class="about-content">
+                <div class="section-label">Why Choose Us</div>
+                <h2 class="section-title">Real Locksmiths,<br>Not a Call Centre</h2>
+                <p>When you call Car Fast Response, you speak directly to a qualified locksmith &mdash; not a middleman. We're a local Wakefield business with over 7 years of specialist automotive locksmith experience.</p>
+                <p>We use the latest LISHI tools and specialist lock pick sets to gain entry to your vehicle absolutely damage free. Our goal is simple: get you back on the road as soon as possible.</p>
+
+                <ul class="about-checks">
+                    <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> 30-minute target response</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> NNAL approved locksmith</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> NVQ Level 2 qualified</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> CRB checked staff</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Checkatrade verified</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> All cards accepted</li>
+                </ul>
+
+                <div class="about-phone">
+                    <div class="about-phone-icon">
+                        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
+                    </div>
+                    <div>
+                        <a href="tel:01924201261" class="about-phone-number">01924 201 261</a>
+                        <div class="about-phone-sub">Available 24/7 &mdash; 365 days a year</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BADGES BAR -->
+<div class="badges-bar">
+    <div class="container">
+        <div class="badge-item">
+            <img src="https://www.locksmithsinwakefield.co.uk/uploads/7/6/5/3/76533111/screenshot-2024-06-16-222210_orig.png" alt="Quality Business Award Winner 2024 - Best Locksmith in Wakefield">
+            <span>Award Winner</span>
+        </div>
+        <div class="badge-item">
+            <img src="https://www.locksmithsinwakefield.co.uk/uploads/7/6/5/3/76533111/published/download.png?1718570526" alt="Three Best Rated - Top 3 Locksmiths in Wakefield">
+            <span>Three Best Rated</span>
+        </div>
+        <div class="badge-item">
+            <img src="https://www.checkatrade.com/Reputation/ApiChart/FastResponseLocksmiths.png" alt="Checkatrade Verified" style="height:50px;">
+            <span>Checkatrade</span>
+        </div>
+        <div class="badge-item">
+            <img src="https://www.locksmithsinwakefield.co.uk/uploads/7/6/5/3/76533111/1472740054.png" alt="Fast Response Locksmiths Logo" style="height:50px;">
+            <span>Est. Wakefield</span>
+        </div>
+    </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">How It Works</div>
+            <h2 class="section-title">Three Simple Steps</h2>
+            <p class="section-subtitle">Back on the road in no time &mdash; here's how it works.</p>
+        </div>
+
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-num">1</div>
+                <h3>Give Us a Ring</h3>
+                <p>Call <strong>01924 201 261</strong> &mdash; you'll speak directly to a locksmith, not a call centre. Tell us where you are and what vehicle you've got.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <h3>We Come to You</h3>
+                <p>Our fully equipped mobile locksmith heads straight to you &mdash; typically within 30 minutes across the Wakefield area.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <h3>Back on the Road</h3>
+                <p>We get you into your vehicle or provide replacement keys on the spot. No damage, no fuss, no dealer prices.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TOOLS STRIP -->
+<div class="tools-strip">
+    <div class="container">
+        <div class="tools-grid">
+            <div class="tools-image">
+                <img src="https://www.locksmithsinwakefield.co.uk/uploads/7/6/5/3/76533111/13619946-1165661100170415-1028512653605169258-n_orig.jpg" alt="Car Fast Response auto locksmith at work on a vehicle">
+            </div>
+            <div class="tools-content">
+                <h3>Professional Equipment, Professional Results</h3>
+                <p>We carry the latest specialist auto locksmith tools in our fully equipped mobile unit. Using professional-grade LISHI tools and specialist lock pick sets, we guarantee damage-free entry to your vehicle every time.</p>
+                <ul class="tools-list">
+                    <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> LISHI Tools</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Lock Pick Sets</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Key Cutting Machine</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Transponder Programmer</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Non-Destructive Methods</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Fully Mobile</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- COVERAGE -->
+<section class="coverage section" id="coverage">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">Areas Covered</div>
+            <h2 class="section-title">Wakefield &amp; All WF Postcodes</h2>
+            <p class="section-subtitle">We cover the whole of the Wakefield postcode area plus anywhere within one hour's travelling distance.</p>
+        </div>
+
+        <div class="coverage-grid">
+            <div class="cov-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Wakefield</div>
+            <div class="cov-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Castleford</div>
+            <div class="cov-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Pontefract</div>
+            <div class="cov-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Dewsbury</div>
+            <div class="cov-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Batley</div>
+            <div class="cov-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Heckmondwike</div>
+            <div class="cov-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Ossett</div>
+            <div class="cov-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Normanton</div>
+            <div class="cov-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Knottingley</div>
+            <div class="cov-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Mirfield</div>
+            <div class="cov-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Liversedge</div>
+            <div class="cov-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> West Yorkshire</div>
+        </div>
+
+        <p class="coverage-note">Not sure if we cover your area? Give us a ring &mdash; if you're within an hour of Wakefield, we'll do our best to reach you.</p>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials section" id="reviews">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">Customer Reviews</div>
+            <h2 class="section-title">What Drivers Say About Us</h2>
+            <p class="section-subtitle">Real feedback from customers we've helped get back on the road across West Yorkshire.</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="test-card">
+                <div class="test-stars">
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <blockquote>"Very helpful advice, honest and really efficient. Locked my keys in the boot and they were with me in about 20 minutes. Had me back in without a scratch. Competitive pricing and professional service."</blockquote>
+                <div class="test-author">
+                    <div class="test-avatar">MT</div>
+                    <div>
+                        <div class="test-name">Martyn</div>
+                        <div class="test-loc">Wakefield</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-card">
+                <div class="test-stars">
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <blockquote>"Called at 3am after my key snapped in the ignition. They actually answered, came out, and sorted it fast. Professional the whole time. Fair price too. Absolute lifesaver when you're stranded."</blockquote>
+                <div class="test-author">
+                    <div class="test-avatar">SM</div>
+                    <div>
+                        <div class="test-name">Sammy</div>
+                        <div class="test-loc">Castleford</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-card">
+                <div class="test-stars">
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <blockquote>"Diagnosed the problem and gave me a price over the phone. Arrived within 30 minutes. Lost my only key and they cut and programmed a new one on the spot. Saved me a fortune compared to the dealer."</blockquote>
+                <div class="test-author">
+                    <div class="test-avatar">MR</div>
+                    <div>
+                        <div class="test-name">Martin</div>
+                        <div class="test-loc">Pontefract</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="container">
+        <h2>Locked Out? Let's Get You Moving.</h2>
+        <p>You talk direct to a locksmith, not a call centre. One call is all it takes.</p>
+        <a href="tel:01924201261" class="cta-phone">01924 201 261</a>
+        <span class="cta-mobile">Mobile: <a href="tel:07812593251">07812 593 251</a></span>
+        <a href="tel:01924201261" class="btn btn-dark btn-lg">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
+            Call Now for Immediate Help
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo-block">
+                    <div class="footer-logo-text">Car Fast Response</div>
+                </div>
+                <p class="footer-desc">Wakefield's trusted auto locksmith. Run by locksmiths, not a call centre &mdash; when you ring, you speak directly to the person who'll be helping you. Fully mobile and covering the whole WF postcode area.</p>
+                <div class="footer-certs">
+                    <div class="footer-cert"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> NNAL</div>
+                    <div class="footer-cert"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> NVQ L2</div>
+                    <div class="footer-cert"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> CRB</div>
+                    <div class="footer-cert"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Checkatrade</div>
+                </div>
+            </div>
+
+            <div>
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Car Lockouts</a></li>
+                    <li><a href="#services">Lost Key Replacement</a></li>
+                    <li><a href="#services">Chip Keys &amp; Fobs</a></li>
+                    <li><a href="#services">Ignition Repair</a></li>
+                    <li><a href="#services">Key Cutting</a></li>
+                    <li><a href="#services">Vans &amp; Commercial</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Areas Covered</h4>
+                <ul>
+                    <li><a href="#coverage">Wakefield</a></li>
+                    <li><a href="#coverage">Castleford</a></li>
+                    <li><a href="#coverage">Pontefract</a></li>
+                    <li><a href="#coverage">Dewsbury</a></li>
+                    <li><a href="#coverage">Ossett &amp; Normanton</a></li>
+                    <li><a href="#coverage">All WF Postcodes</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <div class="footer-contact-row">
+                    <div class="footer-contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
+                    </div>
+                    <div class="footer-contact-text">
+                        <a href="tel:01924201261">01924 201 261</a><br>
+                        <strong>24/7 Landline</strong>
+                    </div>
+                </div>
+                <div class="footer-contact-row">
+                    <div class="footer-contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
+                    </div>
+                    <div class="footer-contact-text">
+                        <a href="tel:07812593251">07812 593 251</a><br>
+                        <strong>Mobile</strong>
+                    </div>
+                </div>
+                <div class="footer-contact-row">
+                    <div class="footer-contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+                    </div>
+                    <div class="footer-contact-text">
+                        Serving Wakefield &amp;<br><strong>All WF Postcodes</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 Car Fast Response. All rights reserved.</span>
+            <span>All major credit &amp; debit cards accepted</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    window.addEventListener('scroll', function() {
+        document.getElementById('header').classList.toggle('scrolled', window.scrollY > 20);
+    });
+</script>
+
+</body>
+</html>
