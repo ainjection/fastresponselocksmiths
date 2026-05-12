@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ainjection.github.io/carfastresponse/sitemap.xml
+Sitemap: https://ainjection.github.io/fastresponselocksmiths/sitemap.xml
