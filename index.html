@@ -23,36 +23,37 @@
 <meta name="twitter:description" content="24-hour locksmiths. Home, car, commercial. Real locksmiths answer the phone.">
 <meta name="twitter:image" content="https://ainjection.github.io/fastresponselocksmiths/og-card.png">
 
-<meta name="theme-color" content="#f4f0e8">
+<meta name="theme-color" content="#b71823">
 <meta name="format-detection" content="telephone=yes">
 <meta name="geo.region" content="GB-WKF">
 <meta name="geo.placename" content="Wakefield">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=Inter:ital,wght@1,800;1,900&display=swap" rel="stylesheet">
 
 <style>
   :root {
-    --ink: oklch(20% 0.012 60);
-    --ink-soft: oklch(36% 0.012 60);
-    --muted: oklch(48% 0.008 70);
-    --paper: oklch(96% 0.008 80);
-    --paper-warm: oklch(93% 0.012 75);
-    --rule: oklch(82% 0.012 70);
-    --brass: oklch(58% 0.13 60);
-    --brass-deep: oklch(46% 0.12 55);
-    --brass-soft: oklch(85% 0.06 60);
-    --night: oklch(20% 0.018 250);
-    --good: oklch(58% 0.13 150);
+    --red: oklch(48% 0.20 26);
+    --red-bright: oklch(58% 0.22 28);
+    --red-deep: oklch(36% 0.15 25);
+    --red-tint: oklch(96% 0.04 26);
+    --black: oklch(14% 0.005 0);
+    --charcoal: oklch(22% 0.008 0);
+    --slate: oklch(38% 0.008 0);
+    --muted: oklch(54% 0.005 60);
+    --paper: oklch(98% 0.003 60);
+    --paper-warm: oklch(95% 0.005 60);
+    --rule: oklch(86% 0.005 60);
+    --gold: oklch(72% 0.13 80);
+    --gold-bright: oklch(82% 0.15 85);
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   body {
-    font-family: 'Fraunces', ui-serif, Georgia, serif;
-    font-size: 17px;
-    line-height: 1.6;
-    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 17px; line-height: 1.6;
+    color: var(--charcoal);
     background: var(--paper);
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
@@ -60,220 +61,322 @@
   a { color: inherit; text-decoration: none; }
   img, svg { max-width: 100%; height: auto; display: block; }
   button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
-  .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-  .container { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
-  h1, h2, h3, h4 { font-family: 'Fraunces', ui-serif, Georgia, serif; font-weight: 600; letter-spacing: -0.012em; line-height: 1.12; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+  .anton { font-family: 'Anton', 'Inter', sans-serif; font-weight: 400; letter-spacing: 0; text-transform: uppercase; }
 
   .skip { position: absolute; left: -9999px; }
-  .skip:focus { left: 12px; top: 12px; background: var(--ink); color: var(--paper); padding: 10px 16px; border-radius: 6px; z-index: 100; }
+  .skip:focus { left: 12px; top: 12px; background: var(--black); color: var(--paper); padding: 10px 16px; border-radius: 6px; z-index: 100; }
+
+  /* === TOP RIBBON === */
+  .ribbon { background: var(--black); color: oklch(86% 0.005 60); padding: 8px 0; font-size: 13px; font-weight: 500; }
+  .ribbon-inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .ribbon .badges { display: flex; gap: 18px; flex-wrap: wrap; }
+  .ribbon .badges span { display: inline-flex; align-items: center; gap: 6px; }
+  .ribbon .badges svg { width: 12px; height: 12px; fill: var(--gold); }
+  .ribbon a.phone { color: var(--gold-bright); font-weight: 700; letter-spacing: 0.02em; }
+  .ribbon a.phone:hover { color: var(--paper); }
+  @media (max-width: 640px) { .ribbon { padding: 6px 0; font-size: 11px; } .ribbon .badges span:nth-child(n+3) { display: none; } }
 
   /* === HEADER === */
-  .topnav {
-    position: sticky; top: 0; z-index: 50;
-    background: rgba(244, 240, 232, 0.92);
-    backdrop-filter: saturate(160%) blur(10px);
-    -webkit-backdrop-filter: saturate(160%) blur(10px);
-    border-bottom: 1px solid var(--rule);
+  .topnav { position: sticky; top: 0; z-index: 50; background: var(--paper); border-bottom: 3px solid var(--red); box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+  .topnav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 24px; }
+  .logo {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: var(--red); color: var(--paper);
+    padding: 10px 16px; border: 3px solid var(--paper); outline: 2px solid var(--red);
+    font-family: 'Inter', sans-serif; font-weight: 900; font-style: italic;
+    letter-spacing: -0.01em; line-height: 1;
+    box-shadow: 0 4px 12px oklch(40% 0.15 25 / 0.25);
   }
-  .topnav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
-  .brand { display: flex; align-items: baseline; gap: 10px; font-family: 'Fraunces', serif; font-size: 22px; font-weight: 800; letter-spacing: -0.01em; }
-  .brand .small { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
-  .topnav nav { display: flex; gap: 26px; align-items: center; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; }
-  .topnav nav a { color: var(--ink-soft); transition: color 0.18s ease-out; }
-  .topnav nav a:hover { color: var(--brass-deep); }
-  .topnav .call-pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 999px; background: var(--ink); color: var(--paper); font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; transition: background 0.18s ease-out; }
-  .topnav .call-pill:hover { background: var(--brass-deep); }
+  .logo-pad { width: 32px; height: 32px; flex-shrink: 0; }
+  .logo-text { display: flex; flex-direction: column; font-size: 15px; }
+  .logo-text .top { font-size: 16px; }
+  .logo-text .bot { font-size: 13px; letter-spacing: 0.04em; }
+  .topnav nav { display: flex; gap: 24px; align-items: center; font-size: 14px; font-weight: 600; }
+  .topnav nav a { color: var(--charcoal); text-transform: uppercase; letter-spacing: 0.04em; font-size: 13px; transition: color 0.15s; }
+  .topnav nav a:hover { color: var(--red); }
+  .topnav .call-pill {
+    display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 4px;
+    background: var(--red); color: var(--paper);
+    font-weight: 700; font-size: 14px; letter-spacing: 0.01em;
+    transition: background 0.18s, transform 0.18s;
+  }
+  .topnav .call-pill:hover { background: var(--red-bright); transform: translateY(-1px); }
   .topnav .call-pill svg { width: 14px; height: 14px; fill: currentColor; }
-  @media (max-width: 780px) { .topnav nav a:not(.call-pill) { display: none; } }
+  @media (max-width: 860px) { .topnav nav a:not(.call-pill) { display: none; } }
 
   /* === HERO === */
-  .hero { padding: 72px 0 56px; }
-  .hero-line { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brass-deep); margin-bottom: 24px; }
-  .hero-line::before { content: ''; display: inline-block; width: 32px; height: 1px; background: var(--brass-deep); margin-right: 12px; vertical-align: middle; }
-  .hero h1 { font-size: clamp(40px, 6.4vw, 84px); font-weight: 800; line-height: 1.02; letter-spacing: -0.028em; margin-bottom: 28px; max-width: 14ch; }
-  .hero h1 em { font-style: italic; color: var(--brass-deep); font-weight: 600; }
-  .hero-lede { font-size: clamp(18px, 1.6vw, 22px); line-height: 1.55; color: var(--ink-soft); max-width: 56ch; margin-bottom: 36px; }
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, var(--black) 0%, var(--charcoal) 60%, oklch(28% 0.06 25) 100%);
+    color: var(--paper);
+    overflow: hidden;
+    min-height: 620px;
+    display: flex; align-items: center;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%;
+    background-image: url('assets/locksmith-at-work.jpg');
+    background-size: cover; background-position: 50% 30%;
+    opacity: 0.95;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 30%, black 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, black 30%, black 100%);
+  }
+  .hero::after {
+    content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%;
+    background: linear-gradient(180deg, oklch(20% 0.05 25 / 0.3) 0%, oklch(20% 0.06 25 / 0.5) 100%);
+    mix-blend-mode: multiply;
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    padding: 84px 0 96px;
+    max-width: 720px;
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--red); color: var(--paper);
+    padding: 8px 16px;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+    margin-bottom: 28px;
+    border-radius: 2px;
+  }
+  .hero-eyebrow .dot {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--gold-bright);
+    box-shadow: 0 0 0 4px oklch(72% 0.13 80 / 0.35);
+    animation: pulse 1.6s ease-out infinite;
+  }
+  @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 4px oklch(72% 0.13 80 / 0.4); } 50% { box-shadow: 0 0 0 10px oklch(72% 0.13 80 / 0); } }
+  .hero h1 {
+    font-family: 'Anton', 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: clamp(54px, 9vw, 120px);
+    line-height: 0.92;
+    letter-spacing: 0.005em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    text-shadow: 0 4px 28px oklch(15% 0.06 25 / 0.6);
+  }
+  .hero h1 .red { color: var(--gold-bright); }
+  .hero h1 .stack { display: block; }
+  .hero-lede {
+    font-size: clamp(17px, 1.6vw, 21px); line-height: 1.5;
+    color: oklch(92% 0.008 60);
+    max-width: 52ch;
+    margin-bottom: 36px;
+  }
   .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
-  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 999px; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 16px; transition: transform 0.18s ease-out, background 0.18s ease-out; }
-  .btn-primary { background: var(--ink); color: var(--paper); }
-  .btn-primary:hover { background: var(--brass-deep); transform: translateY(-1px); }
-  .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--rule); }
-  .btn-ghost:hover { border-color: var(--ink); }
-  .btn svg { width: 16px; height: 16px; fill: currentColor; }
-  .hero-aside { margin-top: 32px; font-family: 'Inter', sans-serif; font-size: 14px; color: var(--muted); }
-  .hero-aside a { color: var(--ink-soft); border-bottom: 1px solid var(--rule); }
+  .btn {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 18px 28px; border-radius: 4px;
+    font-weight: 700; font-size: 17px; letter-spacing: 0.02em;
+    text-transform: uppercase;
+    transition: transform 0.18s, background 0.18s, box-shadow 0.18s;
+  }
+  .btn-call { background: var(--red); color: var(--paper); box-shadow: 0 8px 24px oklch(40% 0.18 25 / 0.5); }
+  .btn-call:hover { background: var(--red-bright); transform: translateY(-2px); box-shadow: 0 12px 32px oklch(40% 0.18 25 / 0.6); }
+  .btn-call svg { width: 20px; height: 20px; fill: currentColor; }
+  .btn-ghost { background: rgba(255,255,255,0.06); color: var(--paper); border: 2px solid oklch(80% 0.005 60 / 0.35); }
+  .btn-ghost:hover { background: rgba(255,255,255,0.12); border-color: var(--paper); }
+  .hero-aside { margin-top: 28px; font-size: 14px; color: oklch(78% 0.012 75); }
+  .hero-aside a { color: oklch(88% 0.012 75); border-bottom: 1px solid oklch(40% 0.012 75); }
+  @media (max-width: 760px) {
+    .hero::before { width: 100%; -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 50%, black 100%); mask-image: linear-gradient(180deg, transparent 0%, black 50%, black 100%); opacity: 0.45; }
+    .hero::after { width: 100%; }
+    .hero-content { padding: 56px 0 72px; }
+  }
 
-  /* === STATS RIBBON === */
-  .stats { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 36px 0; background: var(--paper-warm); }
-  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-  .stat .num { font-family: 'Fraunces', serif; font-size: clamp(36px, 4.4vw, 50px); font-weight: 800; letter-spacing: -0.02em; line-height: 1; color: var(--ink); }
-  .stat .num .unit { font-size: 0.55em; font-weight: 600; color: var(--brass-deep); margin-left: 2px; }
-  .stat .lbl { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-top: 8px; }
-  @media (max-width: 640px) { .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 20px; } }
+  /* === RED BAR === */
+  .strap { background: var(--red); color: var(--paper); padding: 18px 0; }
+  .strap-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; font-weight: 700; }
+  .strap .points { display: flex; gap: 24px; flex-wrap: wrap; align-items: center; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; }
+  .strap .points span { display: inline-flex; align-items: center; gap: 8px; }
+  .strap .points svg { width: 16px; height: 16px; fill: var(--gold-bright); }
+  .strap .phone-link { font-size: 20px; letter-spacing: 0.02em; font-weight: 800; }
+  .strap .phone-link:hover { color: var(--gold-bright); }
+
+  /* === STATS === */
+  .stats { background: var(--paper-warm); border-bottom: 1px solid var(--rule); padding: 44px 0; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .stat { padding: 8px 12px; border-left: 3px solid var(--red); }
+  .stat .num { font-family: 'Anton', sans-serif; font-size: clamp(40px, 5vw, 56px); line-height: 1; color: var(--black); }
+  .stat .num .unit { font-size: 0.45em; color: var(--red); margin-left: 4px; }
+  .stat .lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--slate); margin-top: 8px; }
+  @media (max-width: 640px) { .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 16px; } }
 
   /* === SECTIONS === */
   section.block { padding: 88px 0; }
-  .sec-eyebrow { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brass-deep); margin-bottom: 16px; }
-  .sec-eyebrow::before { content: ''; display: inline-block; width: 28px; height: 1px; background: var(--brass-deep); margin-right: 12px; vertical-align: middle; }
-  .sec-title { font-size: clamp(34px, 4.4vw, 52px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; max-width: 22ch; margin-bottom: 24px; }
-  .sec-title em { font-style: italic; color: var(--brass-deep); font-weight: 600; }
-  .sec-lede { font-size: clamp(17px, 1.4vw, 20px); color: var(--ink-soft); max-width: 60ch; margin-bottom: 56px; }
+  .sec-eyebrow { display: inline-block; background: var(--red); color: var(--paper); padding: 6px 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 18px; border-radius: 2px; }
+  .sec-title { font-family: 'Anton', sans-serif; font-size: clamp(36px, 5vw, 64px); line-height: 1.02; letter-spacing: 0.005em; text-transform: uppercase; color: var(--black); max-width: 22ch; margin-bottom: 20px; }
+  .sec-title .red { color: var(--red); }
+  .sec-lede { font-size: clamp(17px, 1.4vw, 19px); color: var(--slate); max-width: 60ch; margin-bottom: 48px; }
 
   /* === DUAL AUDIENCE === */
-  .dual { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-  .dual > a { display: block; padding: 64px 40px; background: var(--paper-warm); transition: background 0.2s, transform 0.2s; position: relative; overflow: hidden; }
-  .dual > a:hover { background: var(--paper); }
-  .dual .lbl { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass-deep); margin-bottom: 18px; }
-  .dual h3 { font-family: 'Fraunces', serif; font-size: clamp(28px, 3.4vw, 42px); font-weight: 700; letter-spacing: -0.018em; line-height: 1.08; margin-bottom: 16px; }
-  .dual h3 em { font-style: italic; color: var(--brass-deep); font-weight: 600; }
-  .dual p { color: var(--ink-soft); font-size: 17px; line-height: 1.55; max-width: 36ch; margin-bottom: 22px; }
-  .dual ul { list-style: none; font-family: 'Inter', sans-serif; font-size: 14px; color: var(--ink-soft); }
-  .dual li { padding: 6px 0; display: flex; gap: 10px; align-items: baseline; }
-  .dual li::before { content: '·'; color: var(--brass); font-weight: 700; }
-  .dual .more { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 2px; }
-  .dual .more::after { content: '→'; transition: transform 0.2s; }
+  .dual { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--rule); border-top: 4px solid var(--red); border-bottom: 4px solid var(--red); }
+  .dual > a { display: block; padding: 56px 40px; background: var(--paper); transition: background 0.2s, transform 0.2s; position: relative; }
+  .dual > a:hover { background: var(--paper-warm); }
   .dual > a:hover .more::after { transform: translateX(4px); }
-  @media (max-width: 760px) { .dual { grid-template-columns: 1fr; } .dual > a { padding: 48px 28px; } }
+  .dual .lbl { display: inline-block; padding: 4px 10px; background: var(--red); color: var(--paper); font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 18px; border-radius: 2px; }
+  .dual h3 { font-family: 'Anton', sans-serif; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.02; letter-spacing: 0.005em; text-transform: uppercase; color: var(--black); margin-bottom: 14px; }
+  .dual h3 .red { color: var(--red); }
+  .dual p { color: var(--slate); font-size: 16px; line-height: 1.55; max-width: 38ch; margin-bottom: 20px; }
+  .dual ul { list-style: none; font-size: 14px; color: var(--charcoal); }
+  .dual li { padding: 6px 0 6px 22px; position: relative; }
+  .dual li::before { content: ''; position: absolute; left: 0; top: 14px; width: 12px; height: 2px; background: var(--red); }
+  .dual .more { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--red); border-bottom: 2px solid var(--red); padding-bottom: 3px; }
+  .dual .more::after { content: '→'; transition: transform 0.2s; }
+  @media (max-width: 760px) { .dual { grid-template-columns: 1fr; } .dual > a { padding: 40px 28px; } }
 
-  /* === 24H BANNER === */
-  .emergency { background: var(--ink); color: var(--paper); padding: 32px 0; }
-  .emergency-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
-  .emergency .lhs { font-family: 'Fraunces', serif; font-size: clamp(20px, 2.2vw, 26px); font-weight: 600; max-width: 30ch; line-height: 1.3; }
-  .emergency .lhs em { color: var(--brass-soft); font-style: italic; }
-  .emergency .phone { display: inline-flex; align-items: center; gap: 12px; padding: 14px 24px; border-radius: 999px; background: var(--brass); color: var(--ink); font-family: 'Inter', sans-serif; font-weight: 700; font-size: 18px; transition: background 0.18s; }
-  .emergency .phone:hover { background: var(--brass-soft); }
-  .emergency .phone svg { width: 18px; height: 18px; fill: currentColor; }
+  /* === EMERGENCY BANNER === */
+  .emergency { background: var(--black); color: var(--paper); padding: 38px 0; border-top: 4px solid var(--red); border-bottom: 4px solid var(--red); }
+  .emergency-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }
+  .emergency .lhs { font-family: 'Anton', sans-serif; font-size: clamp(22px, 2.6vw, 32px); text-transform: uppercase; letter-spacing: 0.005em; line-height: 1.15; max-width: 22ch; }
+  .emergency .lhs .red { color: var(--gold-bright); }
+  .emergency .phone {
+    display: inline-flex; align-items: center; gap: 12px; padding: 18px 28px; border-radius: 4px;
+    background: var(--red); color: var(--paper);
+    font-weight: 800; font-size: 22px; letter-spacing: 0.01em;
+    box-shadow: 0 8px 24px oklch(40% 0.18 25 / 0.4);
+    transition: background 0.18s, transform 0.18s;
+  }
+  .emergency .phone:hover { background: var(--red-bright); transform: translateY(-2px); }
+  .emergency .phone svg { width: 22px; height: 22px; fill: currentColor; }
 
-  /* === WHY EDITORIAL === */
-  .editorial { background: var(--paper-warm); padding: 96px 0; }
-  .editorial-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: start; }
-  .editorial-grid p { color: var(--ink-soft); font-size: 18px; line-height: 1.7; margin-bottom: 18px; max-width: 52ch; }
-  .editorial-grid strong { color: var(--ink); }
-  .credentials { border: 1px solid var(--rule); padding: 28px 32px; border-radius: 12px; background: var(--paper); }
-  .credentials h4 { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brass-deep); margin-bottom: 16px; }
-  .credentials ul { list-style: none; font-family: 'Inter', sans-serif; }
-  .credentials li { padding: 12px 0; border-top: 1px solid var(--rule); font-size: 15px; display: flex; gap: 12px; align-items: center; color: var(--ink); }
+  /* === EDITORIAL === */
+  .editorial { background: var(--paper-warm); padding: 96px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .editorial-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: start; }
+  .editorial-grid p { color: var(--charcoal); font-size: 17px; line-height: 1.7; margin-bottom: 16px; max-width: 56ch; }
+  .editorial-grid strong { color: var(--black); }
+  .editorial-grid p .em { color: var(--red); font-weight: 700; }
+  .credentials { border-top: 4px solid var(--red); background: var(--paper); padding: 28px 30px; box-shadow: 0 4px 24px rgba(0,0,0,0.05); }
+  .credentials h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); margin-bottom: 16px; }
+  .credentials ul { list-style: none; }
+  .credentials li { padding: 12px 0; border-top: 1px solid var(--rule); font-size: 14px; display: flex; gap: 12px; align-items: center; color: var(--charcoal); }
   .credentials li:first-child { border-top: 0; }
-  .credentials li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--brass); flex-shrink: 0; }
+  .credentials li::before { content: ''; width: 14px; height: 14px; background: var(--red); flex-shrink: 0; clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); }
   @media (max-width: 760px) { .editorial-grid { grid-template-columns: 1fr; gap: 36px; } }
 
   /* === COVERAGE === */
   .coverage { background: var(--paper); }
-  .towns { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin-bottom: 32px; }
-  .town { padding: 26px 24px; border: 1px solid var(--rule); border-radius: 12px; }
-  .town h4 { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.015em; }
-  .town .sub { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--muted); }
+  .towns { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+  .town { padding: 24px; background: var(--paper-warm); border-top: 3px solid var(--red); }
+  .town h4 { font-family: 'Anton', sans-serif; font-size: 26px; text-transform: uppercase; letter-spacing: 0.01em; margin-bottom: 4px; color: var(--black); }
+  .town .sub { font-size: 12px; color: var(--slate); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
   @media (max-width: 760px) { .towns { grid-template-columns: 1fr; } }
   .coverage-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--rule); }
-  .coverage-grid .cov { padding: 16px 20px; border-bottom: 1px solid var(--rule); border-right: 1px solid var(--rule); font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: var(--ink-soft); display: flex; align-items: center; gap: 10px; }
-  .coverage-grid .cov::before { content: ''; width: 6px; height: 6px; background: var(--brass); border-radius: 50%; }
+  .coverage-grid .cov { padding: 16px 20px; border-bottom: 1px solid var(--rule); border-right: 1px solid var(--rule); font-size: 14px; font-weight: 600; color: var(--charcoal); display: flex; align-items: center; gap: 10px; }
+  .coverage-grid .cov::before { content: ''; width: 6px; height: 6px; background: var(--red); }
   .coverage-grid .cov:nth-child(4n) { border-right: 0; }
   @media (max-width: 720px) { .coverage-grid { grid-template-columns: repeat(2, 1fr); } .coverage-grid .cov { border-right: 1px solid var(--rule); } .coverage-grid .cov:nth-child(2n) { border-right: 0; } }
 
   /* === REVIEWS === */
   .reviews { background: var(--paper); }
-  .review-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--rule); }
-  .review { padding: 36px 32px; border-bottom: 1px solid var(--rule); border-right: 1px solid var(--rule); }
-  .review:nth-child(2n) { border-right: 0; }
-  .review .who { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--muted); margin-bottom: 14px; }
-  .review .who strong { display: block; font-size: 16px; color: var(--ink); margin-bottom: 2px; font-family: 'Fraunces', serif; font-weight: 600; }
-  .review .stars { color: var(--brass); margin-bottom: 8px; letter-spacing: 2px; font-size: 14px; }
-  .review blockquote { font-family: 'Fraunces', serif; font-size: 19px; line-height: 1.4; font-style: italic; color: var(--ink); }
-  .review blockquote::before { content: '\201C'; color: var(--brass); margin-right: 2px; font-weight: 600; }
-  .review blockquote::after { content: '\201D'; color: var(--brass); margin-left: 2px; font-weight: 600; }
-  @media (max-width: 760px) { .review-grid { grid-template-columns: 1fr; } .review { border-right: 0; } }
+  .review-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--rule); border-top: 4px solid var(--red); }
+  .review { padding: 32px; background: var(--paper-warm); }
+  .review .who { font-size: 13px; color: var(--slate); margin-bottom: 12px; }
+  .review .who strong { display: block; font-family: 'Anton', sans-serif; font-size: 22px; text-transform: uppercase; color: var(--black); margin-bottom: 2px; letter-spacing: 0.01em; }
+  .review .stars { color: var(--gold); margin-bottom: 8px; letter-spacing: 3px; font-size: 16px; }
+  .review blockquote { font-size: 17px; line-height: 1.45; color: var(--black); font-style: italic; font-weight: 500; }
+  .review blockquote::before { content: '\201C'; color: var(--red); font-size: 24px; font-weight: 700; margin-right: 2px; }
+  .review blockquote::after { content: '\201D'; color: var(--red); font-size: 24px; font-weight: 700; }
+  @media (max-width: 760px) { .review-grid { grid-template-columns: 1fr; } }
 
   /* === FAQ === */
   .faq { background: var(--paper-warm); }
   details.faq-item { border-top: 1px solid var(--rule); padding: 22px 0; }
   details.faq-item:last-of-type { border-bottom: 1px solid var(--rule); }
-  details.faq-item summary { list-style: none; cursor: pointer; font-family: 'Fraunces', serif; font-size: clamp(18px, 1.8vw, 22px); font-weight: 600; color: var(--ink); display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  details.faq-item summary { list-style: none; cursor: pointer; font-family: 'Anton', sans-serif; font-size: clamp(20px, 2vw, 26px); text-transform: uppercase; letter-spacing: 0.01em; color: var(--black); display: flex; justify-content: space-between; align-items: center; gap: 16px; }
   details.faq-item summary::-webkit-details-marker { display: none; }
-  details.faq-item summary::after { content: '+'; font-family: 'Inter', sans-serif; font-weight: 400; color: var(--brass-deep); font-size: 24px; line-height: 1; transition: transform 0.2s; }
+  details.faq-item summary::after { content: '+'; color: var(--red); font-size: 28px; line-height: 1; font-weight: 300; font-family: 'Inter', sans-serif; transition: transform 0.2s; }
   details.faq-item[open] summary::after { content: '−'; }
-  details.faq-item .ans { padding-top: 14px; color: var(--ink-soft); font-size: 17px; max-width: 70ch; }
+  details.faq-item .ans { padding-top: 14px; color: var(--charcoal); font-size: 16px; max-width: 70ch; line-height: 1.6; }
 
-  /* === FINAL === */
-  .final { background: var(--ink); color: var(--paper); padding: 112px 0; text-align: center; }
-  .final h2 { font-size: clamp(36px, 5.5vw, 64px); font-weight: 700; letter-spacing: -0.022em; margin-bottom: 24px; line-height: 1.05; }
-  .final h2 em { color: var(--brass-soft); font-style: italic; font-weight: 600; }
-  .final p { color: oklch(80% 0.012 75); font-size: 18px; margin-bottom: 36px; max-width: 50ch; margin-inline: auto; }
-  .final .phone-big { display: inline-block; font-family: 'Fraunces', serif; font-size: clamp(48px, 7vw, 80px); font-weight: 700; letter-spacing: -0.015em; color: var(--brass-soft); margin: 18px 0 26px; }
-  .final .phone-big:hover { color: oklch(78% 0.16 60); }
-  .final small { display: block; font-family: 'Inter', sans-serif; font-size: 14px; color: oklch(70% 0.012 75); margin-top: 28px; }
-  .final small a { color: oklch(82% 0.012 75); border-bottom: 1px solid oklch(40% 0.012 75); }
+  /* === FINAL CTA === */
+  .final { background: var(--black); color: var(--paper); padding: 96px 0; text-align: center; position: relative; overflow: hidden; }
+  .final::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center top, oklch(35% 0.18 25 / 0.45), transparent 60%); }
+  .final-inner { position: relative; z-index: 2; }
+  .final h2 { font-family: 'Anton', sans-serif; font-size: clamp(40px, 6.5vw, 78px); text-transform: uppercase; letter-spacing: 0.005em; line-height: 1.02; margin-bottom: 18px; }
+  .final h2 .red { color: var(--gold-bright); }
+  .final p { color: oklch(82% 0.012 75); font-size: 17px; margin-bottom: 32px; max-width: 50ch; margin-inline: auto; }
+  .final .phone-big { display: inline-block; font-family: 'Anton', sans-serif; font-size: clamp(52px, 8vw, 96px); color: var(--gold-bright); letter-spacing: 0.008em; margin: 14px 0 18px; transition: color 0.18s; }
+  .final .phone-big:hover { color: var(--paper); }
+  .final small { display: block; font-size: 13px; color: oklch(72% 0.012 75); margin-top: 20px; letter-spacing: 0.02em; }
+  .final small a { color: oklch(88% 0.012 75); border-bottom: 1px solid oklch(42% 0.012 75); }
 
   /* === FOOTER === */
-  footer { background: oklch(15% 0.015 60); color: oklch(70% 0.012 75); padding: 64px 0 28px; }
+  footer { background: oklch(10% 0.008 0); color: oklch(72% 0.012 75); padding: 64px 0 28px; }
   .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
-  .foot-grid h4 { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(80% 0.06 60); margin-bottom: 14px; }
-  .foot-grid ul { list-style: none; font-family: 'Inter', sans-serif; font-size: 14px; }
-  .foot-grid li { padding: 4px 0; }
-  .foot-grid a { color: oklch(78% 0.012 75); transition: color 0.18s; }
+  .foot-grid h4 { font-family: 'Anton', sans-serif; font-size: 16px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--gold-bright); margin-bottom: 14px; }
+  .foot-grid ul { list-style: none; font-size: 14px; }
+  .foot-grid li { padding: 5px 0; }
+  .foot-grid a { color: oklch(80% 0.012 75); transition: color 0.15s; }
   .foot-grid a:hover { color: oklch(95% 0.012 75); }
-  .foot-brand { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 800; color: oklch(92% 0.012 75); margin-bottom: 14px; }
+  .foot-brand { font-family: 'Anton', sans-serif; font-size: 28px; text-transform: uppercase; letter-spacing: 0.01em; color: var(--paper); margin-bottom: 14px; }
   .foot-desc { font-size: 14px; line-height: 1.55; max-width: 38ch; margin-bottom: 18px; }
-  .foot-bottom { margin-top: 56px; padding-top: 24px; border-top: 1px solid oklch(28% 0.012 60); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-family: 'Inter', sans-serif; font-size: 12px; color: oklch(60% 0.012 75); }
+  .foot-bottom { margin-top: 52px; padding-top: 22px; border-top: 1px solid oklch(22% 0.012 0); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 12px; color: oklch(60% 0.012 75); }
   @media (max-width: 720px) { .foot-grid { grid-template-columns: 1fr 1fr; } .foot-grid > div:first-child { grid-column: 1 / -1; } }
 
-  /* === STICKY MOBILE ACTION BAR === */
-  .actionbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: var(--ink); color: var(--paper); padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0)); display: none; box-shadow: 0 -4px 20px rgba(0,0,0,0.18); }
+  /* === ACTIONBAR === */
+  .actionbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: var(--black); padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0)); display: none; box-shadow: 0 -4px 20px rgba(0,0,0,0.3); }
   .actionbar-inner { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; max-width: 480px; margin: 0 auto; }
-  .actionbar a { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 6px; border-radius: 10px; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.03em; transition: background 0.18s; }
-  .actionbar a:hover { background: oklch(30% 0.018 250); }
+  .actionbar a { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 6px; border-radius: 6px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--paper); }
+  .actionbar a:hover { background: var(--charcoal); }
   .actionbar svg { width: 22px; height: 22px; fill: currentColor; margin-bottom: 2px; }
-  .actionbar a.primary { background: var(--brass); color: var(--ink); }
-  .actionbar a.primary:hover { background: oklch(65% 0.16 60); }
+  .actionbar a.primary { background: var(--red); color: var(--paper); }
+  .actionbar a.primary:hover { background: var(--red-bright); }
   @media (max-width: 760px) { .actionbar { display: block; } body { padding-bottom: 72px; } }
 
   /* === CHATBOT === */
-  .cbot-toggle {
-    position: fixed; right: 22px; bottom: 22px; z-index: 70;
-    width: 60px; height: 60px; border-radius: 50%;
-    background: var(--brass); color: var(--ink);
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 8px 28px rgba(0,0,0,0.22);
-    cursor: pointer; transition: transform 0.2s, background 0.2s;
-  }
-  .cbot-toggle:hover { transform: translateY(-2px); background: var(--brass-soft); }
+  .cbot-toggle { position: fixed; right: 22px; bottom: 22px; z-index: 70; width: 60px; height: 60px; border-radius: 50%; background: var(--red); color: var(--paper); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 28px oklch(40% 0.15 25 / 0.45); cursor: pointer; transition: transform 0.2s, background 0.2s; }
+  .cbot-toggle:hover { transform: translateY(-3px); background: var(--red-bright); }
   .cbot-toggle svg { width: 26px; height: 26px; fill: currentColor; }
-  .cbot-toggle .ping { position: absolute; top: 6px; right: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--good); border: 2px solid var(--paper); }
+  .cbot-toggle .ping { position: absolute; top: 4px; right: 4px; width: 14px; height: 14px; border-radius: 50%; background: var(--gold-bright); border: 2px solid var(--paper); animation: pulse 1.6s ease-out infinite; }
   @media (max-width: 760px) { .cbot-toggle { bottom: 90px; right: 14px; } }
-
-  .cbot-panel {
-    position: fixed; right: 22px; bottom: 96px; z-index: 70;
-    width: 340px; max-width: calc(100vw - 28px);
-    background: var(--paper); border: 1px solid var(--rule); border-radius: 16px;
-    box-shadow: 0 24px 60px rgba(0,0,0,0.22);
-    display: none; flex-direction: column; overflow: hidden;
-    max-height: 70vh;
-  }
+  .cbot-panel { position: fixed; right: 22px; bottom: 96px; z-index: 70; width: 340px; max-width: calc(100vw - 28px); background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 24px 60px rgba(0,0,0,0.28); display: none; flex-direction: column; overflow: hidden; max-height: 70vh; }
   .cbot-panel.open { display: flex; }
-  .cbot-head { background: var(--ink); color: var(--paper); padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; }
-  .cbot-head h4 { font-family: 'Fraunces', serif; font-weight: 700; font-size: 18px; }
-  .cbot-head .sub { font-family: 'Inter', sans-serif; font-size: 11px; color: var(--brass-soft); letter-spacing: 0.1em; text-transform: uppercase; }
-  .cbot-close { font-size: 22px; line-height: 1; color: var(--paper); padding: 4px 8px; }
-  .cbot-body { padding: 18px 20px; font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.55; overflow-y: auto; flex: 1; }
-  .cbot-msg { background: var(--paper-warm); border-radius: 14px 14px 14px 4px; padding: 12px 16px; margin-bottom: 12px; color: var(--ink); }
-  .cbot-msg.user { background: var(--ink); color: var(--paper); border-radius: 14px 14px 4px 14px; align-self: flex-end; margin-left: auto; max-width: 80%; }
+  .cbot-head { background: var(--red); color: var(--paper); padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; }
+  .cbot-head h4 { font-family: 'Anton', sans-serif; font-size: 20px; text-transform: uppercase; letter-spacing: 0.02em; }
+  .cbot-head .sub { font-size: 11px; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; }
+  .cbot-close { font-size: 24px; line-height: 1; color: var(--paper); padding: 4px 8px; }
+  .cbot-body { padding: 18px 20px; font-size: 14px; line-height: 1.55; overflow-y: auto; flex: 1; }
+  .cbot-msg { background: var(--paper-warm); border-radius: 12px 12px 12px 4px; padding: 12px 16px; margin-bottom: 12px; color: var(--charcoal); }
+  .cbot-msg.user { background: var(--black); color: var(--paper); border-radius: 12px 12px 4px 12px; margin-left: auto; max-width: 80%; }
   .cbot-options { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
-  .cbot-options button { background: transparent; border: 1px solid var(--ink); color: var(--ink); padding: 10px 14px; border-radius: 999px; font: 600 13px 'Inter', sans-serif; text-align: left; transition: background 0.18s, color 0.18s; cursor: pointer; }
-  .cbot-options button:hover { background: var(--ink); color: var(--paper); }
-  .cbot-options button.primary { background: var(--brass); border-color: var(--brass); color: var(--ink); }
-  .cbot-options button.primary:hover { background: var(--brass-soft); color: var(--ink); }
-  .cbot-foot { padding: 12px 20px; border-top: 1px solid var(--rule); background: var(--paper-warm); display: flex; justify-content: space-between; align-items: center; font-family: 'Inter', sans-serif; font-size: 12px; color: var(--muted); }
-  .cbot-foot a { color: var(--ink); font-weight: 600; border-bottom: 1px solid var(--rule); }
-  .cbot-foot button.reset { font: 600 11px 'Inter', sans-serif; color: var(--muted); border: 0; background: 0; cursor: pointer; padding: 4px 0; }
-  .cbot-foot button.reset:hover { color: var(--ink); }
+  .cbot-options button { background: transparent; border: 2px solid var(--black); color: var(--black); padding: 10px 14px; border-radius: 4px; font: 700 13px 'Inter', sans-serif; letter-spacing: 0.02em; text-align: left; cursor: pointer; transition: background 0.15s, color 0.15s; }
+  .cbot-options button:hover { background: var(--black); color: var(--paper); }
+  .cbot-options button.primary { background: var(--red); border-color: var(--red); color: var(--paper); }
+  .cbot-options button.primary:hover { background: var(--red-bright); border-color: var(--red-bright); }
+  .cbot-foot { padding: 12px 20px; border-top: 1px solid var(--rule); background: var(--paper-warm); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--slate); }
+  .cbot-foot a { color: var(--red); font-weight: 700; }
+  .cbot-foot button.reset { font: 700 11px 'Inter', sans-serif; color: var(--slate); border: 0; background: 0; cursor: pointer; letter-spacing: 0.04em; text-transform: uppercase; }
+  .cbot-foot button.reset:hover { color: var(--black); }
 </style>
 </head>
 <body>
 
 <a class="skip" href="#main">Skip to main content</a>
 
+<div class="ribbon">
+  <div class="container ribbon-inner">
+    <div class="badges">
+      <span><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> NNAL Approved</span>
+      <span><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> NVQ Level 2</span>
+      <span><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> CRB Checked</span>
+      <span><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Insurance Approved</span>
+      <span><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Best in Wakefield 2024</span>
+    </div>
+    <a href="tel:01924201261" class="phone">24h: 01924 201 261</a>
+  </div>
+</div>
+
 <header class="topnav">
   <div class="container topnav-inner">
-    <a href="/fastresponselocksmiths/" class="brand">Fast&nbsp;Response <span class="small">Locksmiths</span></a>
+    <a href="/fastresponselocksmiths/" class="logo" aria-label="Fast Response Locksmiths home">
+      <img src="assets/padlock.png" alt="" class="logo-pad" loading="eager" decoding="async">
+      <span class="logo-text">
+        <span class="top">Fast Response</span>
+        <span class="bot">LOCKSMITHS</span>
+      </span>
+    </a>
     <nav aria-label="Primary">
       <a href="/fastresponselocksmiths/home-locksmith/">Home &amp; Property</a>
       <a href="/fastresponselocksmiths/auto-locksmith/">Cars &amp; Vehicles</a>
@@ -291,44 +394,56 @@
 
 <section class="hero">
   <div class="container">
-    <div class="hero-line">24-hour locksmith · Wakefield · Huddersfield · Barnsley</div>
-    <h1>House or car. Day or night. The locksmith <em>answers</em>.</h1>
-    <p class="hero-lede">When you ring Fast Response Locksmiths you reach the qualified locksmith who'll be coming to help you — not a call centre. Seven years specialising in domestic, commercial and automotive work across West Yorkshire. Lock changes, UPVC repairs, post-burglary security, lost car keys cut on-site, ignition repair. Honest price quoted on the phone before we set off.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="tel:01924201261">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
-        Call 01924 201 261
-      </a>
-      <a class="btn btn-ghost" href="#services">What we do</a>
-    </div>
-    <div class="hero-aside sans">
-      Mobile (out-of-hours): <a href="tel:07812593251">07812 593 251</a> · Email <a href="mailto:info@fastresponselocksmiths.co.uk">info@fastresponselocksmiths.co.uk</a>
+    <div class="hero-content">
+      <div class="hero-eyebrow"><span class="dot"></span>24-Hour Emergency Locksmith</div>
+      <h1><span class="stack">Locked Out?</span><span class="stack red">We're On Our Way.</span></h1>
+      <p class="hero-lede">When you ring Fast Response you reach the qualified locksmith who'll be coming — not a call centre. Seven years on the road in Wakefield, Huddersfield and Barnsley. Home, car and commercial work. Damage-free entry, lost keys cut on-site, ignition repair. Honest price quoted on the phone before we set off.</p>
+      <div class="hero-actions">
+        <a class="btn btn-call" href="tel:01924201261">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
+          Call 01924 201 261
+        </a>
+        <a class="btn btn-ghost" href="#services">What we do →</a>
+      </div>
+      <div class="hero-aside">Mobile out-of-hours: <a href="tel:07812593251">07812 593 251</a> · Email <a href="mailto:info@fastresponselocksmiths.co.uk">info@fastresponselocksmiths.co.uk</a></div>
     </div>
   </div>
 </section>
 
+<div class="strap">
+  <div class="container strap-inner">
+    <div class="points">
+      <span><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> No call-out charge</span>
+      <span><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Damage-free entry</span>
+      <span><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Fixed price before we set off</span>
+      <span><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Cards &amp; cash accepted</span>
+    </div>
+    <a class="phone-link" href="tel:01924201261">01924 201 261</a>
+  </div>
+</div>
+
 <section class="stats">
   <div class="container">
     <div class="stats-grid">
-      <div class="stat"><div class="num">7<span class="unit">yrs</span></div><div class="lbl">In business</div></div>
-      <div class="stat"><div class="num">30<span class="unit">min</span></div><div class="lbl">Target response</div></div>
+      <div class="stat"><div class="num">7<span class="unit">YRS</span></div><div class="lbl">In business</div></div>
+      <div class="stat"><div class="num">30<span class="unit">MIN</span></div><div class="lbl">Target response</div></div>
       <div class="stat"><div class="num">24/7</div><div class="lbl">365 days a year</div></div>
-      <div class="stat"><div class="num">3<span class="unit">towns</span></div><div class="lbl">Wakefield · Hudds · Barnsley</div></div>
+      <div class="stat"><div class="num">3<span class="unit">TOWNS</span></div><div class="lbl">Wakefield Hudds Barnsley</div></div>
     </div>
   </div>
 </section>
 
 <section class="block" id="services">
   <div class="container">
-    <div class="sec-eyebrow">Choose your situation</div>
-    <h2 class="sec-title">House lock? <em>Or</em> car lock?</h2>
+    <div class="sec-eyebrow">Choose your job</div>
+    <h2 class="sec-title">House lock? <span class="red">Or car lock?</span></h2>
     <p class="sec-lede">Two specialities, one phone number. Pick the side that fits — or just ring us and we'll work it out together.</p>
   </div>
   <div class="dual">
     <a href="/fastresponselocksmiths/home-locksmith/">
-      <div class="lbl">Home &amp; Property</div>
-      <h3>Doors, windows &amp; <em>peace of mind</em>.</h3>
-      <p>Lock changes, UPVC mechanism repair, digital lock systems, post-burglary security and full home security audits.</p>
+      <span class="lbl">Home &amp; Property</span>
+      <h3>Doors, windows &amp; <span class="red">peace of mind</span></h3>
+      <p>Lock changes, UPVC mechanism repair, digital lock systems, post-burglary insurance work, master-key systems, garage door locks and full home security audits.</p>
       <ul>
         <li>UPVC lock repair</li>
         <li>Lock replacement &amp; installation</li>
@@ -341,9 +456,9 @@
       <span class="more">See home services</span>
     </a>
     <a href="/fastresponselocksmiths/auto-locksmith/">
-      <div class="lbl">Cars &amp; Vehicles</div>
-      <h3>Lockout, lost keys &amp; <em>kerbside fixes</em>.</h3>
-      <p>Damage-free vehicle entry, lost-key cut &amp; programmed at your location, ignition repair, spare key cutting, vans &amp; fleets.</p>
+      <span class="lbl">Cars &amp; Vehicles</span>
+      <h3>Lockout, lost keys &amp; <span class="red">kerbside fixes</span></h3>
+      <p>Damage-free vehicle entry, lost-key cut &amp; programmed at your location, ignition repair, spare key cutting, transponder chip keys, vans and fleets.</p>
       <ul>
         <li>Car lockouts — damage-free</li>
         <li>Lost car keys cut on-site</li>
@@ -358,7 +473,7 @@
 
 <section class="emergency">
   <div class="container emergency-inner">
-    <div class="lhs">Locked out <em>right now</em>? Skip the form. Ring the locksmith.</div>
+    <div class="lhs">Locked out <span class="red">RIGHT NOW</span>? Skip the form. Ring the locksmith.</div>
     <a class="phone" href="tel:01924201261">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
       01924 201 261
@@ -369,23 +484,23 @@
 <section class="block editorial" id="why">
   <div class="container">
     <div class="sec-eyebrow">Why us</div>
-    <h2 class="sec-title">Real locksmiths. <em>Not</em> a call centre.</h2>
+    <h2 class="sec-title">Real locksmiths. <span class="red">Not a call centre.</span></h2>
     <div class="editorial-grid">
       <div>
-        <p>Most of the "locksmith near me" numbers Google shows you don't ring a locksmith's phone. They ring a call centre. The call centre passes your job to whoever's available and willing to pay them a cut. You don't know who's coming, they don't know your situation, and prices balloon when they arrive.</p>
-        <p>Fast Response Locksmiths is different. When you call <strong>01924 201 261</strong> you reach the locksmith. We tell you the price before we set off and that's the price you pay. Seven years specialising — NVQ Level 2 qualified, NNAL approved, CRB-checked, insurance-approved work. We carry the parts and the kit for the vast majority of UK home and vehicle locks.</p>
-        <p>Estate agents, landlords, local authorities, the police and Wakefield's student population use us. So do drivers stuck on a forecourt at 3am. Address: <strong>32 Major Street, Wakefield WF2 7SB</strong>.</p>
+        <p>Most "locksmith near me" numbers Google shows you don't ring a locksmith's phone. They ring a call centre. The call centre passes your job to whoever's available and willing to pay them a cut. You don't know who's coming, they don't know your situation, and prices balloon when they arrive.</p>
+        <p>Fast Response Locksmiths is different. When you call <strong>01924 201 261</strong> you reach <span class="em">the locksmith</span>. We tell you the price before we set off and that's the price you pay. Seven years specialising — NVQ Level 2, NNAL approved, CRB-checked, insurance-approved work. Voted <span class="em">Best Locksmith in Wakefield 2024</span> by Quality Business Awards with a 95%+ quality rating.</p>
+        <p>Estate agents, landlords, local authorities, the police and Wakefield's student population all use us. So do drivers stuck on a forecourt at 3am. Same number for everyone. Address: <strong>32 Major Street, Wakefield WF2 7SB</strong>.</p>
       </div>
-      <aside class="credentials sans">
+      <aside class="credentials">
         <h4>Credentials</h4>
         <ul>
           <li>NVQ Level 2 Qualified</li>
           <li>NNAL Approved Locksmith</li>
           <li>CRB Checked &amp; Vetted</li>
           <li>Insurance Approved Standards</li>
-          <li>Checkatrade Verified</li>
-          <li>Quality Business Awards Best in Wakefield 2024</li>
+          <li>Best in Wakefield 2024 · Quality Business Awards</li>
           <li>Three Best Rated Locksmith Wakefield</li>
+          <li>Checkatrade Verified</li>
           <li>All major debit &amp; credit cards</li>
         </ul>
       </aside>
@@ -396,14 +511,14 @@
 <section class="block coverage" id="coverage">
   <div class="container">
     <div class="sec-eyebrow">Areas covered</div>
-    <h2 class="sec-title">Three towns. <em>One hour</em> in every direction.</h2>
-    <p class="sec-lede">Based in Wakefield, working across West and South Yorkshire. If you're inside the area below we'll hit a 30-minute target — wider, an hour.</p>
+    <h2 class="sec-title">Three towns. <span class="red">One hour</span> in every direction.</h2>
+    <p class="sec-lede">Based at 32 Major Street, Wakefield WF2 7SB. Inside the WF, HD and S70–S75 postcodes we hit a 30-minute target — wider, an hour.</p>
     <div class="towns">
-      <div class="town"><h4>Wakefield</h4><div class="sub">WF1–WF17, all postcodes</div></div>
-      <div class="town"><h4>Huddersfield</h4><div class="sub">HD1–HD9, town &amp; villages</div></div>
-      <div class="town"><h4>Barnsley</h4><div class="sub">S70–S75, town &amp; villages</div></div>
+      <div class="town"><h4>Wakefield</h4><div class="sub">WF1–WF17 · ALL POSTCODES</div></div>
+      <div class="town"><h4>Huddersfield</h4><div class="sub">HD1–HD9 · TOWN &amp; VILLAGES</div></div>
+      <div class="town"><h4>Barnsley</h4><div class="sub">S70–S75 · TOWN &amp; VILLAGES</div></div>
     </div>
-    <div class="coverage-grid sans">
+    <div class="coverage-grid">
       <div class="cov">Wakefield</div>
       <div class="cov">Huddersfield</div>
       <div class="cov">Barnsley</div>
@@ -417,9 +532,9 @@
       <div class="cov">Knottingley</div>
       <div class="cov">Mirfield</div>
       <div class="cov">Liversedge</div>
-      <div class="cov">Mirfield</div>
       <div class="cov">Penistone</div>
       <div class="cov">Hoyland</div>
+      <div class="cov">South Yorkshire</div>
     </div>
   </div>
 </section>
@@ -427,7 +542,7 @@
 <section class="block reviews" id="reviews">
   <div class="container">
     <div class="sec-eyebrow">What customers say</div>
-    <h2 class="sec-title">Seven stories. <em>Told by name.</em></h2>
+    <h2 class="sec-title">Six stories. <span class="red">Told by name.</span></h2>
   </div>
   <div class="container">
     <div class="review-grid">
@@ -449,17 +564,17 @@
       <article class="review">
         <div class="who"><strong>Andy</strong>Pontefract · Renovation lock-fit</div>
         <div class="stars">★★★★★</div>
-        <blockquote>Used them on a renovation property — full house worth of locks fitted on the same day. Tidy, careful work and a fair price. Will definitely use you next time.</blockquote>
+        <blockquote>Used them on a renovation property — full house worth of locks fitted on the same day. Tidy, careful work and a fair price.</blockquote>
       </article>
       <article class="review">
         <div class="who"><strong>Martin</strong>Pontefract · Lost car keys</div>
         <div class="stars">★★★★★</div>
-        <blockquote>Diagnosed the problem and gave me a price over the phone. Arrived within 30 minutes. Lost my only key and they cut and programmed a new one on the spot. Saved me a fortune compared to the dealer.</blockquote>
+        <blockquote>Diagnosed the problem and gave me a price over the phone. Arrived within 30 minutes. Lost my only key and they cut and programmed a new one on the spot. Saved me a fortune.</blockquote>
       </article>
       <article class="review">
         <div class="who"><strong>Bert</strong>Wakefield · Emergency lockout</div>
         <div class="stars">★★★★★</div>
-        <blockquote>Locked out of the house at the worst possible moment. Bert (the locksmith) was calm, sorted the door without damage, and didn't sting me on price. Brilliant service.</blockquote>
+        <blockquote>Locked out of the house at the worst possible moment. Sorted the door without damage, didn't sting me on price. Brilliant service.</blockquote>
       </article>
     </div>
   </div>
@@ -468,45 +583,24 @@
 <section class="block faq" id="faq">
   <div class="container">
     <div class="sec-eyebrow">Common questions</div>
-    <h2 class="sec-title">Most-asked, <em>answered straight</em>.</h2>
+    <h2 class="sec-title">Most-asked, <span class="red">answered straight.</span></h2>
 
-    <details class="faq-item">
-      <summary>Do you cover home, car or both?</summary>
-      <div class="ans">Both. We're a full locksmith service: domestic (UPVC, lock changes, digital locks, post-burglary), commercial (estate agents, landlords, councils, schools) and automotive (lockout, lost keys, ignition repair, key cutting and fob programming).</div>
-    </details>
-    <details class="faq-item">
-      <summary>Is there a call-out charge?</summary>
-      <div class="ans">No. We quote a fixed price for the whole job over the phone before we leave the workshop. That's the price you pay, regardless of how long it takes us. No surprise add-ons.</div>
-    </details>
-    <details class="faq-item">
-      <summary>How fast can you get to me?</summary>
-      <div class="ans">Our target is 30 minutes inside the Wakefield postcode area (WF1–WF17). For Huddersfield (HD), Barnsley (S70–S75) and the rest of West/South Yorkshire we target one hour. We'll give you an honest ETA on the phone.</div>
-    </details>
-    <details class="faq-item">
-      <summary>Are you insurance approved?</summary>
-      <div class="ans">Yes — post-burglary lock replacement and door repair is done to insurance-approved standards. We provide receipts and certificates of work for your insurer.</div>
-    </details>
-    <details class="faq-item">
-      <summary>Will you damage my door or car?</summary>
-      <div class="ans">No. We use specialist non-destructive tools — LISHI sets for vehicles, lock-pick sets and dedicated UPVC tools for homes. If we can't open it without damage, we don't charge.</div>
-    </details>
-    <details class="faq-item">
-      <summary>Do you work at night and on bank holidays?</summary>
-      <div class="ans">Yes. 24 hours a day, seven days a week, 365 days a year. The same locksmith answers the phone at 3am as at 3pm. Out-of-hours rates are not loaded.</div>
-    </details>
-    <details class="faq-item">
-      <summary>Card or cash?</summary>
-      <div class="ans">All major debit and credit cards (Visa, Mastercard, American Express). Cash is fine too. Payment after the job is done, never before.</div>
-    </details>
+    <details class="faq-item"><summary>Do you cover home, car or both?</summary><div class="ans">Both. We're a full locksmith service: domestic (UPVC, lock changes, digital locks, post-burglary, master keys, garage), commercial (estate agents, landlords, councils, schools) and automotive (lockout, lost keys, ignition repair, key cutting, fob programming).</div></details>
+    <details class="faq-item"><summary>Is there a call-out charge?</summary><div class="ans">No. We quote a fixed price for the whole job over the phone before we leave the workshop. That's the price you pay, regardless of how long it takes us. No surprise add-ons.</div></details>
+    <details class="faq-item"><summary>How fast can you get to me?</summary><div class="ans">Our target is 30 minutes inside the Wakefield postcode area (WF1–WF17). For Huddersfield (HD), Barnsley (S70–S75) and the rest of West/South Yorkshire we target one hour.</div></details>
+    <details class="faq-item"><summary>Are you insurance approved?</summary><div class="ans">Yes — post-burglary lock replacement and door repair is done to insurance-approved standards. We provide receipts and certificates of work for your insurer.</div></details>
+    <details class="faq-item"><summary>Will you damage my door or car?</summary><div class="ans">No. We use specialist non-destructive tools — LISHI sets for vehicles, lock-pick sets and dedicated UPVC tools for homes. If we can't open it without damage, we don't charge.</div></details>
+    <details class="faq-item"><summary>Do you work at night and on bank holidays?</summary><div class="ans">Yes. 24 hours a day, seven days a week, 365 days a year. The same locksmith answers the phone at 3am as at 3pm. Out-of-hours rates are not loaded.</div></details>
+    <details class="faq-item"><summary>Card or cash?</summary><div class="ans">All major debit and credit cards (Visa, Mastercard, American Express). Cash is fine too. Payment after the job is done, never before.</div></details>
   </div>
 </section>
 
 <section class="final" id="contact">
-  <div class="container">
-    <h2>One call to the <em>locksmith</em>.</h2>
+  <div class="container final-inner">
+    <h2>One call to the <span class="red">locksmith.</span></h2>
     <p>Honest price, given before we leave the workshop. House, car or commercial. We're here.</p>
     <a class="phone-big" href="tel:01924201261">01924 201 261</a>
-    <small>Mobile out-of-hours: <a href="tel:07812593251">07812 593 251</a> · Email <a href="mailto:info@fastresponselocksmiths.co.uk">info@fastresponselocksmiths.co.uk</a></small>
+    <small>Mobile out-of-hours: <a href="tel:07812593251">07812 593 251</a> · Email <a href="mailto:info@fastresponselocksmiths.co.uk">info@fastresponselocksmiths.co.uk</a> · 32 Major Street, Wakefield WF2 7SB</small>
   </div>
 </section>
 
@@ -526,6 +620,8 @@
           <li><a href="/fastresponselocksmiths/home-locksmith/">Lock replacement</a></li>
           <li><a href="/fastresponselocksmiths/home-locksmith/">Digital lock systems</a></li>
           <li><a href="/fastresponselocksmiths/home-locksmith/">Burglar repair</a></li>
+          <li><a href="/fastresponselocksmiths/home-locksmith/">Master key systems</a></li>
+          <li><a href="/fastresponselocksmiths/home-locksmith/">Garage door locks</a></li>
           <li><a href="/fastresponselocksmiths/home-locksmith/">Security check</a></li>
         </ul>
       </div>
@@ -559,182 +655,101 @@
 
 <div class="actionbar" aria-label="Quick actions">
   <div class="actionbar-inner">
-    <a href="tel:01924201261" class="primary">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
-      Call
-    </a>
-    <a href="sms:01924201261?&body=Hi%20Fast%20Response%20Locksmiths%2C%20I%20need%20help%20with%20">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
-      Text
-    </a>
-    <a href="https://wa.me/447812593251?text=Hi%20Fast%20Response%20Locksmiths%2C%20I%20need%20help%20with%20">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-      WhatsApp
-    </a>
+    <a href="tel:01924201261" class="primary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>Call</a>
+    <a href="sms:01924201261?&body=Hi%20Fast%20Response%2C%20I%20need%20help%20with%20"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>Text</a>
+    <a href="https://wa.me/447812593251?text=Hi%20Fast%20Response%2C%20I%20need%20help%20with%20"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>WhatsApp</a>
   </div>
 </div>
 
-<!-- CHATBOT -->
 <button class="cbot-toggle" id="cbotToggle" aria-label="Open chat">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z" fill="currentColor"/></svg>
   <span class="ping"></span>
 </button>
-
 <aside class="cbot-panel" id="cbotPanel" aria-label="Help chat">
-  <div class="cbot-head">
-    <div>
-      <h4>Fast Response</h4>
-      <div class="sub">Real locksmith · 24h</div>
-    </div>
-    <button class="cbot-close" id="cbotClose" aria-label="Close chat">×</button>
-  </div>
+  <div class="cbot-head"><div><h4>Fast Response</h4><div class="sub">Real locksmith · 24h</div></div><button class="cbot-close" id="cbotClose" aria-label="Close chat">×</button></div>
   <div class="cbot-body" id="cbotBody"></div>
-  <div class="cbot-foot">
-    <span>Or ring <a href="tel:01924201261">01924 201 261</a></span>
-    <button class="reset" id="cbotReset">Restart</button>
-  </div>
+  <div class="cbot-foot"><span>Or ring <a href="tel:01924201261">01924 201 261</a></span><button class="reset" id="cbotReset">Restart</button></div>
 </aside>
 
 <script>
-  // Chatbot — scripted decision tree, no LLM
   const TREE = {
-    start: {
-      msg: "Hi — what's happening? Pick the closest:",
-      opts: [
-        {label: "I'm locked out of my car", next: "car_lockout"},
-        {label: "I'm locked out of my home", next: "home_lockout"},
-        {label: "I've lost my car keys", next: "lost_keys"},
-        {label: "Burglary / forced entry damage", next: "burglar"},
-        {label: "I need new locks fitted", next: "new_locks"},
-        {label: "Something else", next: "other"}
-      ]
-    },
-    car_lockout: {
-      msg: "Right. Where are you? We're 30 min inside Wakefield, 1 hour wider.",
-      opts: [
-        {label: "Wakefield / WF postcodes", next: "callnow_wf"},
-        {label: "Huddersfield / Barnsley", next: "callnow_wider"},
-        {label: "Somewhere else nearby", next: "callnow_check"}
-      ]
-    },
-    home_lockout: {
-      msg: "Got it. Are you locked outside the property right now, or inside without the key working?",
-      opts: [
-        {label: "Outside — need to get in", next: "callnow_wf"},
-        {label: "Inside — lock won't work", next: "callnow_wf"}
-      ]
-    },
-    lost_keys: {
-      msg: "We cut & programme a new key at your location for most cars (BMW, Audi, Ford, VW, Mercedes etc.). Saves a tow + dealer cost. What's your situation?",
-      opts: [
-        {label: "Lost every key, can't move the car", next: "lost_all"},
-        {label: "Got a spare, just need a replacement", next: "spare_replace"},
-        {label: "Snapped key, fob still works", next: "snapped"}
-      ]
-    },
-    burglar: {
-      msg: "Sorry to hear that. We do insurance-approved post-burglary repair: lock replacement, door/frame repair, security upgrade. Send us your insurance reference if you have one.",
-      opts: [
-        {label: "Call now", next: "callnow_wf"},
-        {label: "Read the home page", next: "go_home"}
-      ]
-    },
-    new_locks: {
-      msg: "House move, renovation, security upgrade or a tenant change? We do all of them.",
-      opts: [
-        {label: "Just moved in / changing all locks", next: "callnow_wf"},
-        {label: "Renovation / multi-property", next: "callnow_wf"},
-        {label: "Upgrading to digital locks", next: "callnow_wf"},
-        {label: "Tell me more first", next: "go_home"}
-      ]
-    },
-    other: {
-      msg: "Easiest is to ring — we'll tell you on the phone whether we can help.",
-      opts: [
-        {label: "Call 01924 201 261", action: "tel:01924201261"},
-        {label: "Text instead", action: "sms:01924201261"}
-      ]
-    },
-    lost_all: {
-      msg: "We come out, cut a key, programme the transponder and pair the fob. From £140 most cars. Where are you?",
-      opts: [
-        {label: "Wakefield / WF", next: "callnow_wf"},
-        {label: "Huddersfield / Barnsley / wider", next: "callnow_wider"}
-      ]
-    },
-    spare_replace: {
-      msg: "Spare cut + programmed from £25 (cut only) or £85+ (cut + programmed). On-site, no booking needed.",
-      opts: [
-        {label: "Book me in — call now", action: "tel:01924201261"},
-        {label: "See full car services", next: "go_auto"}
-      ]
-    },
-    snapped: {
-      msg: "If the bit's still in the ignition we extract it on-site (from £45) and we'll cut you a replacement same visit.",
-      opts: [
-        {label: "Call now", action: "tel:01924201261"},
-        {label: "See full car services", next: "go_auto"}
-      ]
-    },
-    callnow_wf: {
-      msg: "You're inside our 30-minute zone. Ring now and we'll set off.",
-      opts: [
-        {label: "Call 01924 201 261", action: "tel:01924201261"},
-        {label: "Text instead", action: "sms:01924201261"},
-        {label: "WhatsApp", action: "https://wa.me/447812593251"}
-      ]
-    },
-    callnow_wider: {
-      msg: "You're inside our 1-hour zone. Ring and we'll give you an honest ETA.",
-      opts: [
-        {label: "Call 01924 201 261", action: "tel:01924201261"},
-        {label: "WhatsApp", action: "https://wa.me/447812593251"}
-      ]
-    },
-    callnow_check: {
-      msg: "Ring us with your postcode — we'll tell you in 30 seconds whether we can reach you.",
-      opts: [
-        {label: "Call 01924 201 261", action: "tel:01924201261"},
-        {label: "Text my postcode", action: "sms:01924201261"}
-      ]
-    },
-    go_home: {action: "/fastresponselocksmiths/home-locksmith/"},
-    go_auto: {action: "/fastresponselocksmiths/auto-locksmith/"}
+    start: { msg: "Hi — what's happening? Pick the closest:", opts: [
+      {label: "I'm locked out of my car", next: "car_lockout"},
+      {label: "I'm locked out of my home", next: "home_lockout"},
+      {label: "I've lost my car keys", next: "lost_keys"},
+      {label: "Burglary / forced entry damage", next: "burglar"},
+      {label: "I need new locks fitted", next: "new_locks"},
+      {label: "Something else", next: "other"}
+    ]},
+    car_lockout: { msg: "Right. Where are you? 30 min inside Wakefield, 1 hour wider.", opts: [
+      {label: "Wakefield / WF postcodes", next: "callnow_wf"},
+      {label: "Huddersfield / Barnsley", next: "callnow_wider"},
+      {label: "Somewhere else nearby", next: "callnow_check"}
+    ]},
+    home_lockout: { msg: "Got it. Outside the property right now, or inside with a lock that won't work?", opts: [
+      {label: "Outside — need to get in", next: "callnow_wf"},
+      {label: "Inside — lock won't work", next: "callnow_wf"}
+    ]},
+    lost_keys: { msg: "We cut & programme a new key at your location for most cars. Saves a tow + dealer cost.", opts: [
+      {label: "Lost every key, can't move the car", next: "lost_all"},
+      {label: "Got a spare, just need a replacement", next: "spare_replace"},
+      {label: "Snapped key, fob still works", next: "snapped"}
+    ]},
+    burglar: { msg: "Sorry to hear that. Insurance-approved post-burglary: lock replacement, door/frame repair, written certificate for the insurer.", opts: [
+      {label: "Call now", next: "callnow_wf"},
+      {label: "See home services", next: "go_home"}
+    ]},
+    new_locks: { msg: "Move-in, renovation, security upgrade, tenant change — we do them all.", opts: [
+      {label: "Just moved in", next: "callnow_wf"},
+      {label: "Renovation / multi-property", next: "callnow_wf"},
+      {label: "Upgrade to digital locks", next: "callnow_wf"},
+      {label: "Tell me more first", next: "go_home"}
+    ]},
+    other: { msg: "Easiest is to ring — we'll tell you on the phone whether we can help.", opts: [
+      {label: "Call 01924 201 261", action: "tel:01924201261"},
+      {label: "Text instead", action: "sms:01924201261"}
+    ]},
+    lost_all: { msg: "We come out, cut a key, programme the transponder, pair the fob. From £140 most cars. Where are you?", opts: [
+      {label: "Wakefield / WF", next: "callnow_wf"},
+      {label: "Huddersfield / Barnsley / wider", next: "callnow_wider"}
+    ]},
+    spare_replace: { msg: "Spare cut + programmed from £25 (cut only) or £85+ (cut + programmed). On-site, no booking needed.", opts: [
+      {label: "Book me in", action: "tel:01924201261"},
+      {label: "See car services", next: "go_auto"}
+    ]},
+    snapped: { msg: "If the bit's still in the ignition we extract it on-site (from £45) and cut you a replacement same visit.", opts: [
+      {label: "Call now", action: "tel:01924201261"},
+      {label: "See car services", next: "go_auto"}
+    ]},
+    callnow_wf: { msg: "You're inside our 30-minute zone. Ring now and we'll set off.", opts: [
+      {label: "Call 01924 201 261", action: "tel:01924201261"},
+      {label: "Text instead", action: "sms:01924201261"},
+      {label: "WhatsApp", action: "https://wa.me/447812593251"}
+    ]},
+    callnow_wider: { msg: "You're inside our 1-hour zone. Ring and we'll give you an honest ETA.", opts: [
+      {label: "Call 01924 201 261", action: "tel:01924201261"},
+      {label: "WhatsApp", action: "https://wa.me/447812593251"}
+    ]},
+    callnow_check: { msg: "Ring with your postcode — we'll tell you in 30 seconds.", opts: [
+      {label: "Call 01924 201 261", action: "tel:01924201261"}
+    ]},
+    go_home: { action: "/fastresponselocksmiths/home-locksmith/" },
+    go_auto: { action: "/fastresponselocksmiths/auto-locksmith/" }
   };
-
   const body = document.getElementById('cbotBody');
   function render(key) {
-    const node = TREE[key];
-    if (!node) return;
+    const node = TREE[key]; if (!node) return;
     if (node.action && !node.opts) { window.location.href = node.action; return; }
     body.innerHTML = '<div class="cbot-msg">' + node.msg + '</div><div class="cbot-options"></div>';
     const wrap = body.querySelector('.cbot-options');
     node.opts.forEach((o, i) => {
-      const b = document.createElement('button');
-      b.textContent = o.label;
-      if (i === 0) b.className = 'primary';
-      b.onclick = () => {
-        body.innerHTML += '<div class="cbot-msg user">' + o.label + '</div>';
-        if (o.action) {
-          if (o.action.startsWith('http') || o.action.startsWith('tel') || o.action.startsWith('sms') || o.action.startsWith('mailto')) {
-            window.location.href = o.action;
-          } else {
-            window.location.href = o.action;
-          }
-        } else if (o.next) {
-          setTimeout(() => render(o.next), 320);
-        }
-      };
+      const b = document.createElement('button'); b.textContent = o.label; if (i === 0) b.className = 'primary';
+      b.onclick = () => { body.innerHTML += '<div class="cbot-msg user">' + o.label + '</div>'; if (o.action) { window.location.href = o.action; } else if (o.next) { setTimeout(() => render(o.next), 320); } };
       wrap.appendChild(b);
     });
     body.scrollTop = body.scrollHeight;
   }
-
-  document.getElementById('cbotToggle').onclick = () => {
-    const p = document.getElementById('cbotPanel');
-    p.classList.toggle('open');
-    if (p.classList.contains('open') && !body.innerHTML) render('start');
-  };
+  document.getElementById('cbotToggle').onclick = () => { const p = document.getElementById('cbotPanel'); p.classList.toggle('open'); if (p.classList.contains('open') && !body.innerHTML) render('start'); };
   document.getElementById('cbotClose').onclick = () => document.getElementById('cbotPanel').classList.remove('open');
   document.getElementById('cbotReset').onclick = () => render('start');
 </script>
@@ -749,42 +764,25 @@
       "url": "https://ainjection.github.io/fastresponselocksmiths/",
       "name": "Fast Response Locksmiths",
       "alternateName": ["Fast Response Locksmith Wakefield", "Car Fast Response"],
-      "description": "24-hour locksmith covering Wakefield, Huddersfield and Barnsley. Locksmith-owned — real locksmiths answer the phone, not a call centre. Home, car and commercial work. Lock changes, UPVC repair, post-burglary security, lost car keys cut on-site.",
+      "description": "24-hour locksmith covering Wakefield, Huddersfield and Barnsley. Locksmith-owned — real locksmiths answer the phone, not a call centre. Home, car and commercial work.",
       "telephone": "+441924201261",
       "email": "info@fastresponselocksmiths.co.uk",
       "image": "https://ainjection.github.io/fastresponselocksmiths/og-card.png",
       "priceRange": "££",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "32 Major Street",
-        "addressLocality": "Wakefield",
-        "addressRegion": "West Yorkshire",
-        "postalCode": "WF2 7SB",
-        "addressCountry": "GB"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 53.6822, "longitude": -1.5046 },
+      "address": {"@type":"PostalAddress","streetAddress":"32 Major Street","addressLocality":"Wakefield","addressRegion":"West Yorkshire","postalCode":"WF2 7SB","addressCountry":"GB"},
+      "geo": {"@type":"GeoCoordinates","latitude":53.6822,"longitude":-1.5046},
       "areaServed": [
-        {"@type":"City","name":"Wakefield"},
-        {"@type":"City","name":"Huddersfield"},
-        {"@type":"City","name":"Barnsley"},
-        {"@type":"City","name":"Castleford"},
-        {"@type":"City","name":"Pontefract"},
-        {"@type":"City","name":"Dewsbury"},
-        {"@type":"City","name":"Batley"},
-        {"@type":"City","name":"Heckmondwike"},
-        {"@type":"City","name":"Ossett"},
-        {"@type":"City","name":"Normanton"},
-        {"@type":"City","name":"Knottingley"},
-        {"@type":"City","name":"Mirfield"},
-        {"@type":"City","name":"Liversedge"},
-        {"@type":"City","name":"Penistone"},
-        {"@type":"City","name":"Hoyland"}
+        {"@type":"City","name":"Wakefield"},{"@type":"City","name":"Huddersfield"},{"@type":"City","name":"Barnsley"},
+        {"@type":"City","name":"Castleford"},{"@type":"City","name":"Pontefract"},{"@type":"City","name":"Dewsbury"},
+        {"@type":"City","name":"Batley"},{"@type":"City","name":"Heckmondwike"},{"@type":"City","name":"Ossett"},
+        {"@type":"City","name":"Normanton"},{"@type":"City","name":"Knottingley"},{"@type":"City","name":"Mirfield"},
+        {"@type":"City","name":"Liversedge"},{"@type":"City","name":"Penistone"},{"@type":"City","name":"Hoyland"}
       ],
-      "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" },
+      "openingHoursSpecification": {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"},
       "paymentAccepted": "Cash, Visa, Mastercard, American Express",
       "currenciesAccepted": "GBP",
       "knowsAbout": ["UPVC lock repair","lock replacement","digital lock systems","burglar repair","home security check","master key systems","garage door locks","car lockout","lost car key replacement","ignition repair","car key cutting","transponder key programming","remote fob programming","van locksmith","commercial locksmith"],
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "6", "bestRating": "5", "worstRating": "1" },
+      "aggregateRating": {"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"6","bestRating":"5","worstRating":"1"},
       "review": [
         {"@type":"Review","author":{"@type":"Person","name":"Martyn"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Very helpful advice, honest and really efficient. Locked my keys in the boot and they were with me in about 20 minutes. Had me back in without a scratch."},
         {"@type":"Review","author":{"@type":"Person","name":"Sammy"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Called at 3am after my key snapped in the ignition. They actually answered, came out, and sorted it fast. Absolute lifesaver when you're stranded."},
@@ -798,6 +796,8 @@
     {"@type":"Service","name":"Lock Replacement &amp; Installation","provider":{"@id":"https://ainjection.github.io/fastresponselocksmiths/#business"},"areaServed":"Wakefield, Huddersfield, Barnsley","description":"Full lock replacement and new lock installation for homes, rental property, commercial premises. BS3621 and insurance-grade options."},
     {"@type":"Service","name":"Digital Lock Systems","provider":{"@id":"https://ainjection.github.io/fastresponselocksmiths/#business"},"areaServed":"Wakefield, Huddersfield, Barnsley","description":"Keyless and digital lock supply, installation and reprogramming for residential and commercial properties."},
     {"@type":"Service","name":"Burglar Repair","provider":{"@id":"https://ainjection.github.io/fastresponselocksmiths/#business"},"areaServed":"Wakefield, Huddersfield, Barnsley","description":"Post-burglary lock replacement and door/frame repair to insurance-approved standards. Same-day response."},
+    {"@type":"Service","name":"Master Key Systems","provider":{"@id":"https://ainjection.github.io/fastresponselocksmiths/#business"},"areaServed":"Wakefield, Huddersfield, Barnsley","description":"Master-key system design and installation for landlords, HMOs, estate agents and commercial sites."},
+    {"@type":"Service","name":"Garage Door Locks","provider":{"@id":"https://ainjection.github.io/fastresponselocksmiths/#business"},"areaServed":"Wakefield, Huddersfield, Barnsley","description":"Up-and-over garage door locks, side-door deadbolts, padlocks and supplementary security for sheds, garages and outbuildings."},
     {"@type":"Service","name":"Home Security Check","provider":{"@id":"https://ainjection.github.io/fastresponselocksmiths/#business"},"areaServed":"Wakefield, Huddersfield, Barnsley","description":"Independent residential security audit — entry points, lock grade, supplementary measures. Insurance-grade report."},
     {"@type":"Service","name":"Car Lockout — Damage-Free Entry","provider":{"@id":"https://ainjection.github.io/fastresponselocksmiths/#business"},"areaServed":"Wakefield, Huddersfield, Barnsley","description":"24-hour damage-free vehicle entry using LISHI and specialist lock-pick tools.","offers":{"@type":"Offer","priceCurrency":"GBP","price":"45","priceSpecification":{"@type":"UnitPriceSpecification","priceType":"https://schema.org/MinPrice","price":"45","priceCurrency":"GBP"}}},
     {"@type":"Service","name":"Lost Car Keys — Cut &amp; Programmed On-Site","provider":{"@id":"https://ainjection.github.io/fastresponselocksmiths/#business"},"areaServed":"Wakefield, Huddersfield, Barnsley","description":"Lost car key replacement: cut, transponder programming and remote fob pairing at your location.","offers":{"@type":"Offer","priceCurrency":"GBP","price":"140","priceSpecification":{"@type":"UnitPriceSpecification","priceType":"https://schema.org/MinPrice","price":"140","priceCurrency":"GBP"}}},
@@ -805,11 +805,11 @@
     {
       "@type":"FAQPage",
       "mainEntity":[
-        {"@type":"Question","name":"Do you cover home, car or both?","acceptedAnswer":{"@type":"Answer","text":"Both. We're a full locksmith service: domestic (UPVC, lock changes, digital locks, post-burglary), commercial and automotive (lockout, lost keys, ignition repair, key cutting and fob programming)."}},
-        {"@type":"Question","name":"Is there a call-out charge?","acceptedAnswer":{"@type":"Answer","text":"No. We quote a fixed price for the whole job over the phone before we leave the workshop. That's the price you pay, regardless of how long it takes us."}},
+        {"@type":"Question","name":"Do you cover home, car or both?","acceptedAnswer":{"@type":"Answer","text":"Both. We're a full locksmith service: domestic (UPVC, lock changes, digital locks, post-burglary, master keys, garage), commercial and automotive (lockout, lost keys, ignition repair, key cutting and fob programming)."}},
+        {"@type":"Question","name":"Is there a call-out charge?","acceptedAnswer":{"@type":"Answer","text":"No. We quote a fixed price for the whole job over the phone before we leave the workshop. That's the price you pay."}},
         {"@type":"Question","name":"How fast can you get to me?","acceptedAnswer":{"@type":"Answer","text":"Our target is 30 minutes inside the Wakefield postcode area (WF1–WF17). For Huddersfield, Barnsley and the rest of West and South Yorkshire we target one hour."}},
-        {"@type":"Question","name":"Are you insurance approved?","acceptedAnswer":{"@type":"Answer","text":"Yes, post-burglary lock replacement and door repair is done to insurance-approved standards. We provide receipts and certificates for your insurer."}},
-        {"@type":"Question","name":"Will you damage my door or car?","acceptedAnswer":{"@type":"Answer","text":"No. We use specialist non-destructive tools — LISHI sets for vehicles, lock-pick sets and dedicated UPVC tools for homes. If we can't open it without damage we don't charge."}},
+        {"@type":"Question","name":"Are you insurance approved?","acceptedAnswer":{"@type":"Answer","text":"Yes, post-burglary lock replacement and door repair is done to insurance-approved standards. We provide receipts and certificates."}},
+        {"@type":"Question","name":"Will you damage my door or car?","acceptedAnswer":{"@type":"Answer","text":"No. We use specialist non-destructive tools — LISHI sets for vehicles, lock-pick sets and UPVC tools for homes. If we can't open it without damage we don't charge."}},
         {"@type":"Question","name":"Do you work at night and on bank holidays?","acceptedAnswer":{"@type":"Answer","text":"Yes. 24 hours a day, seven days a week, 365 days a year. Out-of-hours rates are not loaded."}}
       ]
     }
