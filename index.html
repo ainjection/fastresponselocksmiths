@@ -277,11 +277,15 @@
 
   /* === COVERAGE === */
   .coverage { background: var(--paper); }
-  .towns { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 32px; }
-  .town { padding: 24px; background: var(--paper-warm); border-top: 3px solid var(--red); }
-  .town h4 { font-family: 'Anton', sans-serif; font-size: 26px; text-transform: uppercase; letter-spacing: 0.01em; margin-bottom: 4px; color: var(--black); }
-  .town .sub { font-size: 12px; color: var(--slate); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
-  @media (max-width: 760px) { .towns { grid-template-columns: 1fr; } }
+  .towns { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 32px; }
+  .town { display: block; padding: 22px 20px; background: var(--paper-warm); border-top: 3px solid var(--red); position: relative; transition: background 0.18s, transform 0.18s; color: inherit; text-decoration: none; }
+  .town:hover { background: var(--paper); transform: translateY(-2px); }
+  .town h4 { font-family: 'Anton', sans-serif; font-size: 22px; text-transform: uppercase; letter-spacing: 0.01em; margin-bottom: 4px; color: var(--black); }
+  .town .sub { font-size: 11px; color: var(--slate); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+  .town-arrow { position: absolute; top: 22px; right: 18px; color: var(--red); font-size: 18px; font-weight: 700; transition: transform 0.18s; }
+  .town:hover .town-arrow { transform: translateX(4px); }
+  @media (max-width: 980px) { .towns { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 540px) { .towns { grid-template-columns: 1fr; } }
   .coverage-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--rule); }
   .coverage-grid .cov { padding: 16px 20px; border-bottom: 1px solid var(--rule); border-right: 1px solid var(--rule); font-size: 14px; font-weight: 600; color: var(--charcoal); display: flex; align-items: center; gap: 10px; }
   .coverage-grid .cov::before { content: ''; width: 6px; height: 6px; background: var(--red); }
@@ -575,11 +579,13 @@
   <div class="container">
     <div class="sec-eyebrow">Areas covered</div>
     <h2 class="sec-title">Three towns. <span class="red">One hour</span> in every direction.</h2>
-    <p class="sec-lede">Based at 32 Major Street, Wakefield WF2 7SB. Inside the WF, HD and S70–S75 postcodes we hit a 30-minute target — wider, an hour.</p>
+    <p class="sec-lede">Based at 32 Major Street, Wakefield WF2 7SB. Inside the WF, HD and S70–S75 postcodes we hit a 30-minute target — wider, an hour. Tap a town below for full coverage detail.</p>
     <div class="towns">
-      <div class="town"><h4>Wakefield</h4><div class="sub">WF1–WF17 · ALL POSTCODES</div></div>
-      <div class="town"><h4>Huddersfield</h4><div class="sub">HD1–HD9 · TOWN &amp; VILLAGES</div></div>
-      <div class="town"><h4>Barnsley</h4><div class="sub">S70–S75 · TOWN &amp; VILLAGES</div></div>
+      <a class="town" href="/fastresponselocksmiths/wakefield-locksmith/"><h4>Wakefield</h4><div class="sub">WF1–WF17 · 30 MIN</div><div class="town-arrow">→</div></a>
+      <a class="town" href="/fastresponselocksmiths/huddersfield-locksmith/"><h4>Huddersfield</h4><div class="sub">HD1–HD9 · 1 HR</div><div class="town-arrow">→</div></a>
+      <a class="town" href="/fastresponselocksmiths/barnsley-locksmith/"><h4>Barnsley</h4><div class="sub">S70–S75 · 1 HR</div><div class="town-arrow">→</div></a>
+      <a class="town" href="/fastresponselocksmiths/castleford-locksmith/"><h4>Castleford</h4><div class="sub">WF10 · 20 MIN</div><div class="town-arrow">→</div></a>
+      <a class="town" href="/fastresponselocksmiths/pontefract-locksmith/"><h4>Pontefract</h4><div class="sub">WF8 · 25 MIN</div><div class="town-arrow">→</div></a>
     </div>
     <div class="coverage-grid">
       <div class="cov">Wakefield</div>
