@@ -99,13 +99,14 @@
   .topnav nav { display: flex; gap: 24px; align-items: center; font-size: 14px; font-weight: 600; }
   .topnav nav a { color: var(--charcoal); text-transform: uppercase; letter-spacing: 0.04em; font-size: 13px; }
   .topnav nav a:hover { color: var(--red); }
-  .topnav .call-pill { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 4px; background: var(--red); color: var(--paper); font-weight: 700; font-size: 14px; }
+  .topnav .call-pill { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 4px; background: var(--red); color: var(--paper); font-weight: 700; font-size: 14px; white-space: nowrap; }
+  @media (max-width: 480px) { .topnav .call-pill { padding: 8px 12px; font-size: 12px; gap: 5px; } .topnav .call-pill svg { width: 12px; height: 12px; } }
   .topnav .call-pill:hover { background: var(--red-bright); transform: translateY(-1px); }
   .topnav .call-pill svg { width: 14px; height: 14px; fill: currentColor; }
   @media (max-width: 860px) { .topnav nav a:not(.call-pill) { display: none; } }
 
   .hero { position: relative; background: linear-gradient(135deg, var(--black) 0%, var(--charcoal) 60%, oklch(28% 0.06 25) 100%); color: var(--paper); overflow: hidden; min-height: 620px; display: flex; align-items: center; }
-  .hero::before { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background-image: url('../assets/locksmith-at-work.jpg'); background-size: cover; background-position: 50% 30%; opacity: 0.92; -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 30%, black 100%); mask-image: linear-gradient(90deg, transparent 0%, black 30%, black 100%); }
+  .hero::before { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background-image: url('../assets/locksmith-at-work.webp'); background-size: cover; background-position: 50% 30%; opacity: 0.92; -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 30%, black 100%); mask-image: linear-gradient(90deg, transparent 0%, black 30%, black 100%); }
   .hero::after { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: linear-gradient(180deg, oklch(20% 0.05 25 / 0.3) 0%, oklch(20% 0.06 25 / 0.5) 100%); mix-blend-mode: multiply; }
   .hero-content { position: relative; z-index: 2; padding: 84px 0 96px; max-width: 720px; }
   .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; background: var(--red); color: var(--paper); padding: 8px 16px; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 28px; border-radius: 2px; }
@@ -125,9 +126,10 @@
   .hero-aside { margin-top: 28px; font-size: 14px; color: oklch(78% 0.012 75); }
   .hero-aside a { color: oklch(88% 0.012 75); border-bottom: 1px solid oklch(40% 0.012 75); }
   @media (max-width: 760px) {
-    .hero::before { width: 100%; -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 50%, black 100%); mask-image: linear-gradient(180deg, transparent 0%, black 50%, black 100%); opacity: 0.45; }
-    .hero::after { width: 100%; }
-    .hero-content { padding: 56px 0 72px; }
+    .hero { min-height: 720px; }
+    .hero::before { width: 100%; -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 55%, black 100%); mask-image: linear-gradient(180deg, transparent 0%, black 55%, black 100%); opacity: 0.78; }
+    .hero::after { width: 100%; background: linear-gradient(180deg, oklch(15% 0.04 25 / 0.62) 0%, oklch(15% 0.04 25 / 0.55) 35%, oklch(15% 0.04 25 / 0.12) 100%); }
+    .hero-content { padding: 56px 0 56px; }
   }
 
   .strap { background: var(--red); color: var(--paper); padding: 18px 0; }
@@ -422,7 +424,7 @@
 </section>
 
 <figure class="proof-image">
-  <img src="../assets/locksmith-at-work.jpg" alt="Locksmith using a LISHI tool to open a locked car damage-free" loading="lazy">
+  <img src="../assets/locksmith-at-work.webp" alt="Locksmith using a LISHI tool to open a locked car damage-free" loading="lazy">
   <figcaption><span class="label">Proof of work · on-the-road</span>Damage-free entry, in progress.<br>LISHI tool. Red car. No scratches.</figcaption>
 </figure>
 
