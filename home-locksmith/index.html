@@ -52,6 +52,29 @@
   .ribbon .badges svg { width: 12px; height: 12px; fill: var(--gold); }
   .ribbon a.phone { color: var(--gold-bright); font-weight: 700; }
   .ribbon a.phone:hover { color: var(--paper); }
+  .open-badge { display: inline-flex; align-items: center; gap: 8px; padding: 4px 10px; background: oklch(28% 0.13 150 / 0.25); border: 1px solid oklch(60% 0.13 150 / 0.4); border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(82% 0.13 150); }
+  .open-dot { width: 8px; height: 8px; border-radius: 50%; background: oklch(70% 0.18 150); box-shadow: 0 0 0 3px oklch(70% 0.18 150 / 0.35); animation: livepulse 1.8s ease-out infinite; }
+  .open-time { font-variant-numeric: tabular-nums; color: oklch(88% 0.05 150); padding-left: 4px; border-left: 1px solid oklch(45% 0.13 150 / 0.5); }
+  @keyframes livepulse { 0%, 100% { box-shadow: 0 0 0 3px oklch(70% 0.18 150 / 0.4); } 50% { box-shadow: 0 0 0 8px oklch(70% 0.18 150 / 0); } }
+  .map-wrap { margin-top: 36px; border-top: 4px solid var(--red); border-bottom: 1px solid var(--rule); }
+  .map-wrap iframe { filter: contrast(1.02) saturate(0.95); display: block; }
+  .map-caption { padding: 14px 22px; background: var(--paper-warm); border-top: 1px solid var(--rule); font-size: 13px; color: var(--charcoal); }
+  .map-caption strong { color: var(--black); }
+  .quote-block { background: var(--paper-warm); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .quote-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: start; }
+  .quote-copy .sec-title { margin-bottom: 16px; }
+  .quote-checks { list-style: none; margin-top: 28px; }
+  .quote-checks li { padding: 10px 0 10px 28px; position: relative; font-size: 15px; color: var(--charcoal); border-top: 1px solid var(--rule); }
+  .quote-checks li:first-child { border-top: 0; }
+  .quote-checks li::before { content: ''; position: absolute; left: 0; top: 16px; width: 14px; height: 14px; background: var(--red); clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); }
+  .quote-form { background: var(--paper); padding: 32px; border-top: 4px solid var(--red); box-shadow: 0 8px 32px rgba(0,0,0,0.06); display: flex; flex-direction: column; gap: 14px; }
+  .quote-form label { display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate); }
+  .quote-form input, .quote-form textarea { font: 500 16px 'Inter', sans-serif; padding: 12px 14px; border: 2px solid var(--rule); border-radius: 4px; background: var(--paper); color: var(--black); }
+  .quote-form input:focus, .quote-form textarea:focus { outline: 0; border-color: var(--red); }
+  .quote-form textarea { resize: vertical; min-height: 110px; }
+  .quote-form button { margin-top: 8px; justify-content: center; cursor: pointer; }
+  .quote-foot { font-size: 12px; color: var(--slate); text-align: center; }
+  @media (max-width: 760px) { .quote-grid { grid-template-columns: 1fr; gap: 36px; } }
   @media (max-width: 640px) { .ribbon .badges span:nth-child(n+3) { display: none; } }
 
   .topnav { position: sticky; top: 0; z-index: 50; background: var(--paper); border-bottom: 3px solid var(--red); box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
@@ -226,6 +249,7 @@
       <span><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> CRB Checked</span>
       <span><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Best in Wakefield 2024</span>
     </div>
+    <div class="open-badge"><span class="open-dot"></span><span class="open-text">OPEN NOW · 24/7</span><span class="open-time" id="openTime"></span></div>
     <a href="tel:01924201261" class="phone">24h: 01924 201 261</a>
   </div>
 </div>
@@ -379,6 +403,40 @@
       <div class="cov">Pontefract</div><div class="cov">Dewsbury</div><div class="cov">Batley</div><div class="cov">Heckmondwike</div>
       <div class="cov">Ossett</div><div class="cov">Normanton</div><div class="cov">Knottingley</div><div class="cov">Mirfield</div>
       <div class="cov">Liversedge</div><div class="cov">Penistone</div><div class="cov">Hoyland</div><div class="cov">South Yorks</div>
+    </div>
+    <div class="map-wrap">
+      <iframe title="Fast Response Locksmiths, 32 Major Street, Wakefield WF2 7SB" src="https://www.google.com/maps?q=32+Major+Street+Wakefield+WF2+7SB&output=embed" width="100%" height="380" frameborder="0" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="map-caption"><strong>Workshop:</strong> 32 Major Street, Wakefield WF2 7SB &middot; on-the-road across West &amp; South Yorkshire 24h</div>
+    </div>
+  </div>
+</section>
+
+<section class="block quote-block" id="quote">
+  <div class="container">
+    <div class="quote-grid">
+      <div class="quote-copy">
+        <div class="sec-eyebrow">Get a quote</div>
+        <h2 class="sec-title">Prefer to type <span class="red">than call?</span></h2>
+        <p class="sec-lede">Drop your details below and we'll come back with a fixed-price quote. For an emergency (locked out right now) please <a href="tel:01924201261" style="color:var(--red); font-weight:700; border-bottom:2px solid var(--red);">ring 01924&nbsp;201&nbsp;261</a> &mdash; it's faster.</p>
+        <ul class="quote-checks">
+          <li>Fixed price quoted before we set off</li>
+          <li>No call-out fee</li>
+          <li>Real locksmith replies, not a call centre</li>
+        </ul>
+      </div>
+      <form class="quote-form" action="https://formsubmit.co/info@fastresponselocksmiths.co.uk" method="POST">
+        <input type="hidden" name="_subject" value="New quote request — home/property — fastresponselocksmiths">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_next" value="https://ainjection.github.io/fastresponselocksmiths/home-locksmith/?sent=1">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <label>Your name <input type="text" name="Name" required></label>
+        <label>Phone number <input type="tel" name="Phone" required></label>
+        <label>Postcode <input type="text" name="Postcode" placeholder="e.g. WF1 2DA" autocomplete="postal-code"></label>
+        <label>What's the issue? <textarea name="Details" rows="4" required placeholder="UPVC door won't lock / lost house key / lock change after move / etc."></textarea></label>
+        <button type="submit" class="btn btn-call">Send Quote Request</button>
+        <p class="quote-foot">Your details go straight to the locksmith &mdash; no third party, no spam.</p>
+      </form>
     </div>
   </div>
 </section>
@@ -543,6 +601,7 @@
   document.getElementById('cbotToggle').onclick = () => { const p = document.getElementById('cbotPanel'); p.classList.toggle('open'); if (p.classList.contains('open') && !body.innerHTML) render('start'); };
   document.getElementById('cbotClose').onclick = () => document.getElementById('cbotPanel').classList.remove('open');
   document.getElementById('cbotReset').onclick = () => render('start');
+  (function liveTime(){ const el = document.getElementById('openTime'); if (!el) return; function tick(){ const d = new Date(); el.textContent = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: false }); } tick(); setInterval(tick, 30000); })();
 </script>
 
 <script type="application/ld+json">
